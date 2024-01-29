@@ -1,0 +1,276 @@
+html,
+body {
+    font-family: system-ui;
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+header,
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    background-color: #3ca8eb;
+    backdrop-filter: blur(10px);
+    position : fixed;
+    border-bottom: 2px rgb(1, 63, 124) solid;
+	top:0;
+	left:0;
+}
+
+header .wrapper,
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav p{
+    font-family: cursive;
+    font-size : 2rem;
+    font-weight: bold;
+    color : white;
+}
+
+header nav a {
+    font-family: system-ui;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header nav a:hover {
+    text-decoration:underline;
+}
+
+.Buttons{
+    display: flex;
+    
+}
+
+#contactme {
+    border: 2px white solid;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    margin-right : 10px;
+    font-weight: bolder;
+ 
+}
+
+#contactme a {
+    font-size: smaller;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 12px;
+    color: white;
+}
+
+#contactme:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(245,245,245,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+#contactme:hover a {
+    color: #03001C;
+}
+
+
+#GoGithub {
+    border: 2px white solid;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    margin-left : 10px; 
+    font-weight: bolder;
+
+}
+
+#GoGithub a {
+    font-size: smaller;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 12px;
+    color: white;
+}
+
+#GoGithub:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(245,245,245,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+#GoGithub:hover a {
+    color: #03001C;
+}
+
+.wrapper {
+    width: 70%;
+}
+
+h1 {
+    margin-top: 120px;
+    font-size: 3em;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.TitleRoller{
+    height:100vh;
+    width:100%;  
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.TitleRoller h1{
+    text-align:center;
+    color: #F1FAEE; 
+    font-size: 4rem;
+}
+  
+.TitleRoller .roller{
+    height: 5.125rem;
+    line-height: 5rem;
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #1D3557;
+}
+  
+  
+.TitleRoller #spare-time{
+    font-size: 1rem;
+    font-style: italic;
+    letter-spacing: 1rem;
+    margin-top: 0;
+    color: #A8DADC;
+    
+  }
+  
+.TitleRoller .roller #rolltext {
+    position: absolute;
+    top: 0;
+    animation: slide 5s infinite;  
+  }
+  
+  @keyframes slide {
+    0%{
+      top:0;
+    }
+    25%{
+      top: -5rem;    
+    }
+    50%{
+      top: -10rem;
+    }
+    72.5%{
+      top: -14.75rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px){
+    h1{
+    text-align:center;
+    text-transform: uppercase;
+    color: #F1FAEE; 
+    font-size: 2.125rem;
+  }
+    
+    .TitleRoller .roller{
+    height: 2.6rem; 
+    line-height: 2.125rem;  
+    }
+    
+    .TitleRoller #spare-time {
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+    }
+    
+    .TitleRoller .roller #rolltext {  
+    animation: slide-mob 5s infinite;  
+  }
+    
+    @keyframes slide-mob {
+    0%{
+      top:0;
+    }
+    25%{
+      top: -2.125rem;    
+    }
+    50%{
+      top: -4.25rem;
+    }
+    72.5%{
+      top: -6.375rem;
+    }
+  }
+  }
+
+.Pres{
+    display :block
+}
+
+.Image{
+    display : none;
+}
+
+.Image img{
+    width : 30%;
+    height : 30%;
+}
+
+#Accueil:hover{
+    flex : 1;
+    transition: 2s;
+    width : 100%;
+    .Pres{
+        transition: 2s;
+        display : flex;
+    }
+    .Image{
+        transition: 2s;
+        display : block;
+        flex : 2;
+    }
+
+    .Image img{
+        width : 30%;
+        height : 30%;
+    }
+}
