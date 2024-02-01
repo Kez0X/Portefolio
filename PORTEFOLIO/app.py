@@ -6,19 +6,19 @@ def index():
     return render_template("index.html")
 
 @app.route('/projects')
-def index():
+def projects():
     return render_template("projects.html")
 
 @app.route('/loading')
-def index():
+def loading():
     return render_template("loading.html")
 
 @app.route('/aboutme')
-def index():
+def aboutme():
     return render_template("aboutme.html")
 
 @app.route('/projects/page')
-def index():
+def page():
     return render_template("projectPage.html")
 
 
