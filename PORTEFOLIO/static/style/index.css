@@ -4,25 +4,34 @@ body{
     color : white;
     font-family: 'Cutive Mono';
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
+@media (min-width: 1000px) {
+    body{
+        overflow-y: hidden;
+    }
+  }
+
+
+@media (max-width: 1250px) {
+    body{
+        overflow-y:scroll;
+    }
+  }
+  
+
 header{
-    margin-top: 0%;
+    margin-top: -20px;
     text-align: center;
 }
 
 .binary-button{
     padding : 40px 10px;
     background-color : rgba(0, 0, 0, 0.83);
-    -webkit-transition: background 2s;
-    /* Pour safari */
-    transition: background 2s;
-    /* Pour les navigateurs plus modernes */ 
     align-items: center;
     text-align: center;
     border-radius: 15px;
-    border : solid black 1px;
+    border : solid rgb(255, 255, 255) 2px;
     width : 20%;
     margin : auto;
 }
@@ -38,6 +47,7 @@ header{
 
 .binary-button a:hover{
     font-weight: 900;
+    font-size: 1.6rem;
 }
 
 .container{
@@ -77,6 +87,13 @@ header{
     display : flex;
     flex-wrap: wrap;
     align-items: center;
+    margin : auto;
+    width : 70%;
+}
+
+
+.container .card .column1 .socialsSociaux .iconsSocials a{
+    margin : auto;
 }
 
 .container .card .column1 .socialsSociaux .iconsSocials img{
@@ -101,9 +118,39 @@ header{
     margin-bottom: 0;
 }
 
+
+@-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  
+@-webkit-keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
 .container .card .column2 #subtitle{
     font-size: 3.5rem;
     margin-top: 0;
+    border-right: .1em solid rgb(255, 255, 255);
+    width: 15.20ch;
+    white-space: nowrap;
+    animation :step-end infinite alternate;
+    -webkit-animation: typing 3s steps(15, end), blink-caret .3s step-end infinite alternate;
 }
 
 .container .card .column2 .text{
@@ -131,11 +178,13 @@ header{
     background-color: #0094FF;
     color : white;
     border : solid 3px #0094FF;
+    cursor : pointer;
 }
 
 footer{
     display : flex;
     flex-wrap: wrap;
+    margin-bottom: -15px;
 }
 
 
