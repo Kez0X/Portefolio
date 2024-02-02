@@ -187,9 +187,155 @@ footer{
     margin-bottom: -15px;
 }
 
+.loading{
+    display : flex;
+    flex-wrap : wrap;
+    background-color: rgba(0, 0, 0, 0.83);
+    padding-bottom: 20%;
+    margin : 5% 5% 5% 5%;
+}
 
+.loading .content{
+    width : 40%;
+    display: flex;
+    flex-direction: column;
+    margin : auto;
+    margin-top : 15%;
+    margin-left : 20%;
+    margin-right: 0%;
+}
 
+.loading .content h1{
+    color : #0094FF;
+    font-size: 4rem;
+}
 
+.loading .content h2{
+    color : #ffffff;
+    font-size: 3rem;
+    margin-top : -2%;
+}
 
+.loading .load{
+    margin : auto;
+    margin-left : 10%;
+    margin-top : 20%;
+}
+
+@-webkit-keyframes honeycomb {
+    0%,
+    20%,
+    80%,
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0); 
+    }
+    30%,
+    70% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1); 
+    } 
+  }
+  
+  @keyframes honeycomb {
+    0%,
+    20%,
+    80%,
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0); 
+    }
+    30%,
+    70% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1); 
+    } 
+  }
+  
+  .honeycomb {
+    height: 96px;
+    position: relative;
+    width: 96px; 
+  }
+  
+  .honeycomb div {
+    -webkit-animation: honeycomb 2.1s infinite backwards;
+    animation: honeycomb 2.1s infinite backwards;
+    background: #0094FF;
+    height: 48px;
+    margin-top: 24px;
+    position: absolute;
+    width: 96px; 
+  }
+  
+  .honeycomb div:after, .honeycomb div:before {
+    content: '';
+    border-left: 48px solid transparent;
+    border-right: 48px solid transparent;
+    position: absolute;
+    left: 0;
+    right: 0; 
+  }
+  
+  .honeycomb div:after {
+    top: -24px;
+    border-bottom: 24px solid #0094FF;
+  }
+  
+  .honeycomb div:before {
+    bottom: -24px;
+    border-top: 24px solid #0094FF;
+  }
+      
+  .honeycomb div:nth-child(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    left: -112px;
+    top: 0; 
+  }
+  
+  .honeycomb div:nth-child(2) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+    left: -56px;
+    top: 88px; 
+  }   
+      
+  .honeycomb div:nth-child(3) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    left: 56px;
+    top: 88px; 
+  }
+  
+  .honeycomb div:nth-child(4) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    left: 112px;
+    top: 0; 
+  }
+  
+  .honeycomb div:nth-child(5) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    left: 56px;
+    top: -88px; 
+  }
+  .honeycomb div:nth-child(6) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    left: -56px;
+    top: -88px; 
+  }
+  
+  .honeycomb div:nth-child(7) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    left: 0;
+    top: 0; }
 
 

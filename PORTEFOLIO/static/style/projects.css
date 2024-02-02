@@ -9,7 +9,7 @@ body{
 .background-card{
     background-color: rgba(0, 0, 0, 0.83);
     height : 2000%;
-    padding-bottom : 2000px
+    padding-bottom : 500px
 }
   
 header{
@@ -96,9 +96,10 @@ header .secondary-button button:hover{
 
 .container .card{
     background-color: black;
-    border : 3px solid #ff00f7;
+    border : 3px solid #ffffff;
     border-radius: 50px;
     margin-left : 40px;
+    margin-top : 20px;
     max-width: 30%;
 }
 
@@ -108,15 +109,16 @@ header .secondary-button button:hover{
 }
 
 .container .card .header .logo{
+    margin-top : 20px;
     width : 30%;
     text-align: center;
     justify-content: center;
 }
 
 .container .card .header .logo img{
-    border-radius: 360px;
-    border : 2px solid #0094FF;
-    width : 10%;
+    border-radius: 30px;
+    border : 2px solid #ffffff;
+    width : 50%;
 }
 
 .container .card .header .title{
@@ -129,23 +131,63 @@ header .secondary-button button:hover{
 
 .container .card .header .title .name{
     font-size : 2rem;
-    color : #ff00f7;
+    color : #ffffff;
+}
+
+.container .card .header .title .name a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.container .card .header .title .name a:hover{
+    font-weight: 3rem;
+    color : #0094FF;
 }
 
 .container .card .header .title .langages{
+    text-align: left;
+    justify-content: left;
     display: flex;
     flex-direction: row;
-    flex-wrap : wrap;
 }
 
 .container .card .header .title .langages img{
-    margin : auto;
-    width : 5%;
-    border-radius: 360px;
+    margin-left: 10px;
+    width : 9%;
     border : 1px solid black;
 }
 
 .container .card .content{
     text-align: left;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
+.container .card .container-status{
+    text-align: center;
+    margin-top : 20px;
+}
+
+.container .card .container-status .status{
+    font-weight: bolder;
+}
+
+.container .card .container-status .status a{
+    color : white;
+    text-decoration: none;
+}
+
+.container .card .container-status .status #NotAllowed{
+    font-weight: bolder;
+    text-shadow: rgb(255, 0, 0) 10px 0 10px;
+    color : red;
+}
+
+.container .card .container-status .status #NotAllowed{
+    font-weight: bolder;
+    text-shadow: rgb(255, 0, 0) 10px 0 10px;
+}
+
+.container .card .container-status .status #Allowed a:hover{
+    color : #0094FF;
+}
