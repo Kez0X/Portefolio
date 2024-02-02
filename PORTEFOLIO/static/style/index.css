@@ -150,7 +150,7 @@ header{
     width: 15.20ch;
     white-space: nowrap;
     animation :step-end infinite alternate;
-    -webkit-animation: typing 3s steps(15, end), blink-caret .3s step-end infinite alternate;
+    -webkit-animation: typing 4s steps(15, end), blink-caret .4s step-end infinite alternate;
 }
 
 .container .card .column2 .text{
