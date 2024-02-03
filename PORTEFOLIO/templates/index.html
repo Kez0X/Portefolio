@@ -9,9 +9,27 @@
     <title>PORTEFOLIO - Accueil</title>
     <link href="static/style/index.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/static/image/Kez0X.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/loading.css') }}">
 </head>
 
 <body>
+    <div class="loading" id="loadingContainer">
+            <div class="content">
+                <h1>MON PORTEFOLIO</h1>
+                <h2>BAUDRANT LUKA</h2>
+            </div>
+            <div class="load">
+                <div class="honeycomb">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+            </div>
+    </div>
     <header>
         <div class="binary-button">
             <a class="text-binary-button" href="mailto:luka.baudrant@gmail.com">CONTACT ME</a>
@@ -61,9 +79,17 @@
             <a class="text-binary-button" href="/aboutme#skills">SKILLS</a>
         </div>
         <div class="binary-button">
-            <a class="text-binary-button" href="projects">PROJECTS</a>
+            <a class="text-binary-button" href="/projects">PROJECTS</a>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Cacher le chargement après 3 secondes (3000 millisecondes)
+            setTimeout(function() {
+                document.getElementById('loadingContainer').style.display = 'none';
+            }, 3000);
+        });
+    </script>
 </body>
 
 <script>

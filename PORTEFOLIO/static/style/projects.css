@@ -9,7 +9,7 @@ body{
 .background-card{
     background-color: rgba(0, 0, 0, 0.83);
     height : 2000%;
-    padding-bottom : 500px
+    padding-bottom : 600px
 }
   
 header{
@@ -75,6 +75,31 @@ header .secondary-button button:hover{
     text-align: left;
     align-items: center;
     margin-left: 18%;
+}
+
+.secondary-header .titleP{
+    width : 100%;
+    flex : 2;
+    text-align: left;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.secondary-header .titleP .projectPageLogos{
+    display : flex;
+    flex-direction : row;
+}
+
+.secondary-header .titleP .projectPageLogos img{
+    width : 10%;
+    border : solid 1px black;
+    border-radius: 15px;
+    margin-right : 4%;
+}
+
+
+.secondary-header .titleP .projectPageLogos h1{
+   font-size: 3rem;
 }
 
 .line-header{
@@ -189,5 +214,148 @@ header .secondary-button button:hover{
 }
 
 .container .card .container-status .status #Allowed a:hover{
+    color : #0094FF;
+}
+
+.container .Slides{
+    width : 40%;
+    margin : auto;
+    box-sizing: border-box;
+    border : 1px solid white;
+    background-color: black;
+    padding : 10px;
+    padding-top : 20px;
+    border-radius: 50px;;
+}
+
+.container .Slides .mySlides {
+    display: none;
+  }
+  
+.container .Slides img {
+    vertical-align: middle;
+}
+
+.container .Slides .slideshow-container {
+    max-width: 85%;
+    position: relative;
+    margin: auto;
+  }
+  /* Boutons next & previous */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  /* Position de "next button" à la droite */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  /* En survol, ajoutez la couleur noire de l'arrière-plan avec un peu see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: #0094FF;
+  }
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #999999;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active,
+  .dot:hover {
+    background-color: #0094FF;
+  }
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+      font-size: 11px;
+    }
+  }
+
+.container .contenu{
+    width : 50%;
+}
+
+.container .contenu .title{
+    text-align: left;
+    margin-top : 2%;
+    flex-wrap: wrap;
+}
+
+.container .contenu .title h2{
+    font-size: 2rem;
+}
+
+.container .contenu .resume p{
+    text-align: left;
+    margin-left : 50px;
+    margin-right: 20%;
+}
+
+.container .contenu .langages{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 200px;
+    margin-left : 50px;
+}
+
+.container .contenu .status{
+    margin-top : 5%;
+    text-align: center;
+}
+
+.container .contenu .status p{
+    font-size: 2rem;
+}
+
+.container .contenu .status a{
+    color : white;
+    text-decoration: none;
+}
+
+.container .contenu .status a:hover{
     color : #0094FF;
 }
