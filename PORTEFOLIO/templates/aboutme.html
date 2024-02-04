@@ -4,9 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTEFOLIO - About me</title>
+    <link href='https://fonts.googleapis.com/css?family=Cutive Mono' rel='stylesheet'>
+    <title>PORTEFOLIO - Project Page</title>
+    <link href="/static/style/aboutme.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/static/image/Kez0X.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/loading.css') }}">
 </head>
 <body>
-    
+    <div class="loading" id="loadingContainer">
+        <div class="content">
+            <h1>MON PORTEFOLIO</h1>
+            <h2>BAUDRANT LUKA</h2>
+        </div>
+        <div class="load">
+            <div class="honeycomb">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+        </div>
+    </div>
+    <div class="background-card">
+        <header>
+            <div class="secondary-button">
+                <button onclick="window.location.href='mailto: luka.baudrant@gmail.com'">ME CONTACTER</button>
+            </div>
+        </header>
+        <div class="secondary-header">
+            <div class="return">
+                <a href="/projects">↑</a>
+            </div>
+            <div class="titleP">
+                <div class="projectPageLogos">
+                    <h1>A PROPOS DE MOI</h1>
+                </div>
+            </div>
+        </div>
+        <div class="line-header">
+            <div class="line"></div>
+        </div>
+        <div class="container">
+            <div class="descSchema">
+                <div class="desc">
+                    <h1>BAUDRANT LUKA</h1>
+                    <h2>EN GRAPHIQUE</h2>
+                </div>
+                <div class="schema"></div>
+            </div>
+            <div class="title">
+                <h2>MON RESUME</h2>
+            </div>
+            <div class="ContainerResume">
+                <div class="resume">
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                    <div class="circle"></div>
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                    <div class="circle"></div>
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                    <div class="circle"></div>
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                    <div class="lineR"></div>
+                </div>
+                <div class="ResumeTitle">
+                    <h2 id="student">Étudiant et co-créateur de VLD</h2>
+                </div>
+                <div class="ResumeCase">
+                    <div class="case" id="#student">
+                        <p>I'm a Bachelor's student in Computer Science at the University of Lyon 2, co-founder of the website school.vld-group.com and teacher on the online course website superprof.fr . </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Cacher le chargement après 3 secondes (3000 millisecondes)
+            setTimeout(function() {
+                document.getElementById('loadingContainer').style.display = 'none';
+            }, 3000);
+        });
+    </script>
 </body>
 </html>

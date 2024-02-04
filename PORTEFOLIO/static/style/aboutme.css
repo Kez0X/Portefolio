@@ -1,0 +1,203 @@
+body{
+    background-image: url("/static/image/background.png");
+    background-size: cover;
+    color : white;
+    font-family: 'Cutive Mono';
+    margin : 0;
+}
+
+.background-card{
+    background-color: rgba(0, 0, 0, 0.83);
+    height : 2000%;
+    padding-bottom : 600px
+}
+  
+header{
+    text-align: right;
+    height : 0.2rem;
+    margin-top: -10px;
+}
+
+header .secondary-button{
+    text-align: right;
+    margin-right : 2rem;
+}
+
+header .secondary-button button{
+    background-color : #0094FF;
+    padding : 20px 50px;
+    color : white;
+    font-family: 'Cutive Mono';
+    border : solid 1px black;
+    border-radius: 0px 0px 15px 15px;
+    font-size: 1rem;
+}
+
+header .secondary-button button:hover{
+    cursor: pointer;
+    background-color : #ffffff;
+    color : #0094FF;
+    border : solid 3px #0094FF;
+    font-size: 1.2rem;
+}
+
+.secondary-header{
+    display : flex;
+    flex-wrap : wrap;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.secondary-header .return{
+    flex : 1;
+    width : 90%;
+    text-align : center;
+    align-items: center;
+}
+
+.secondary-header .return a {
+    align-items: center;
+    text-align: center;
+    font-size: 8rem;
+    text-decoration: none;
+    color : white
+}
+
+.secondary-header .return a:hover{
+    cursor: pointer;
+    color : #0094FF;
+}
+
+.secondary-header .title{
+    width : 100%;
+    flex : 2;
+    text-align: left;
+    align-items: center;
+    margin-left: 18%;
+}
+
+.secondary-header .titleP{
+    width : 100%;
+    flex : 2;
+    text-align: left;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.secondary-header .titleP .projectPageLogos{
+    display : flex;
+    flex-direction : row;
+}
+
+.secondary-header .titleP .projectPageLogos img{
+    width : 10%;
+    border : solid 1px black;
+    border-radius: 15px;
+    margin-right : 4%;
+}
+
+
+.secondary-header .titleP .projectPageLogos h1{
+   font-size: 3rem;
+}
+
+.line-header{
+    display : flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.line-header .line{
+    width : 30%;
+    border-top : #0094FF solid 3px;
+}
+
+.container{
+    margin-top : 10%;
+    width : 80%;
+    margin : auto;
+    text-align: right;
+}
+
+.container .descSchema{
+    display : flex;
+    text-align: right;
+    flex-direction: row;
+}
+
+.container .descSchema .desc{
+    margin-top: 5%;
+    text-align: right;
+    width : 90%;
+}
+
+.container .descSchema .desc h1{
+    color : #0094FF;
+    font-size: 2.5rem;
+}
+
+.container .descSchema .desc h2{
+    color : #ffffff;
+    font-size: 2rem;
+}
+
+.container .descSchema .schema{
+    width : 10%;
+}
+
+.container .title{
+    margin-top : -5%;
+    text-align : left;
+    margin-left: 5%;
+}
+
+.container .title h2{
+    font-size : 2rem;
+    color : #0094FF;
+}
+
+.container .ContainerResume{
+    display: flex;
+}
+
+.container .ContainerResume .resume{
+    margin-left : 10%;
+    display : flex;
+    flex-direction: column;
+}
+
+.container .ContainerResume .resume .lineR{
+    border-left: #0094FF 2px solid;
+    height : 100px;
+}
+
+.container .ContainerResume .resume .circle{
+    border-left: #0094FF 2px solid;
+    height : 50px;
+    width : 50px;
+    background-color: #0094FF;
+    border-radius: 360px;
+    margin-left : -25px;
+}
+
+.container .ContainerResume .ResumeTitle h2{
+    font-size : 2rem;
+    color : #0094FF;
+}
+
+.container .ContainerResume #student{
+    margin-top : 210px;
+    margin-left : 20px;
+}
+
+.container .ContainerResume .case{
+    padding : 10px;
+    border: #0094FF 2px solid;
+    margin-left : 20%;
+}
+
+#student.case{
+    margin-top : 210px;
+    margin-left : 20px;
+}
