@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Cutive Mono' rel='stylesheet'>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>PORTEFOLIO - Project Page</title>
     <link href="/static/style/projects.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/static/image/Kez0X.ico">
@@ -87,9 +86,13 @@
                         </div>
                     {% endfor %}
                 </div>
-                <div class="schema">
-                    <canvas id="langagesChart"></canvas>
-                </div>                  
+                <div class="schemaContainer">
+                    {% for langage, percentage in project_info.langages.items() %}
+                    <div class="schema">
+                        <p>{{ langage }}</p>
+                    </div>
+                    {% endfor %}
+                </div>                
                 <div class="title">
                     <h2>Temps de travail : {{ project_info.worktime }}</h2>
                 </div>
@@ -115,47 +118,33 @@
                 document.getElementById('loadingContainer').style.display = 'none';
             }, 3000);
         });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          // Récupérer le contexte du canvas
-          var ctx = document.getElementById("langagesChart").getContext("2d");
 
-          // Données pour le graphique
-          var langagesData = {
-            labels: Object.keys(project_info.langages),
-            datasets: [
-              {
-                label: "Pourcentage de langages",
-                data: Object.values(project_info.langages),
-                backgroundColor: "rgba(75, 192, 192, 0.2)",
-                borderColor: "rgba(75, 192, 192, 1)",
-                borderWidth: 5,
-              },
-            ],
-          };
-      
-          // Configuration du graphique
-          var langagesOptions = {
-            scales: {
-              x: {
-                beginAtZero: true,
-                max: 100, // Définir la valeur maximale de l'axe x à 100%
-              },
-              y: {
-                // Configuration de l'axe y si nécessaire
-              },
-            },
-          };
-      
-          // Créer le graphique à barres horizontales
-          var langagesChart = new Chart(ctx, {
-            type: "horizontalBar",
-            data: langagesData,
-            options: langagesOptions,
-          });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // ... Votre code existant ...
+
+            // Liste de couleurs
+            var colors = ['#d90303', '#0b4b09', '#e62bdd', '#fba00b', '#17aaea'];
+
+            // Fonction pour choisir une couleur aléatoire
+            function getRandomColor() {
+                var randomIndex = Math.floor(Math.random() * colors.length);
+                return colors[randomIndex];
+            }
+
+            // Appliquer la couleur de fond aléatoire à l'élément de votre choix
+            var randomColor = getRandomColor();
+            var schemaElements = document.querySelectorAll('.schemaContainer .schema');
+
+            // Appliquer une couleur aléatoire à chaque élément
+            schemaElements.forEach(function(schemaElement) {
+                var randomColor = getRandomColor();
+                schemaElement.style.backgroundColor = randomColor;
+            });
+            // ... Votre code existant ...
         });
-    </script>      
+    </script>
+
     <script>
     var slideIndex = 1;
     showSlides(slideIndex);

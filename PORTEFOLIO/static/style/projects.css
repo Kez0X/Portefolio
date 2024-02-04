@@ -359,3 +359,15 @@ header .secondary-button button:hover{
 .container .contenu .status a:hover{
     color : #0094FF;
 }
+
+.container .schemaContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin : auto;
+}
+
+.container .schemaContainer .schema{
+    border : solid 2px #0094FF;
+    width : 100px;
+}
