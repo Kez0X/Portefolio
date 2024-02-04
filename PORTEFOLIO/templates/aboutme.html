@@ -60,36 +60,98 @@
             </div>
             <div class="ContainerResume">
                 <div class="resume">
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
-                    <div class="circle"></div>
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
-                    <div class="circle"></div>
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
-                    <div class="circle"></div>
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
-                    <div class="lineR"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="circle fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="circle fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="circle fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
                 </div>
                 <div class="ResumeTitle">
-                    <h2 id="student">Étudiant et co-créateur de VLD</h2>
+                    <h2 class="fade-in" id="student">Étudiant et co-créateur de VLD</h2>
+                    <h2 class="fade-in" id="xp" >5 ans d'expériences</h2>
+                    <h2 class="fade-in" id="FS">Developpeur - Enseignant Full Stack</h2>
                 </div>
                 <div class="ResumeCase">
-                    <div class="case" id="#student">
+                    <div class="case fade-in" id="#student">
                         <p>I'm a Bachelor's student in Computer Science at the University of Lyon 2, co-founder of the website school.vld-group.com and teacher on the online course website superprof.fr . </p>
                     </div>
+                    <div class="case fade-in" id="#xp">
+                        <p>I now have 5 years of experience in programming, through my career and my experiences, I learned various programming languages that allow me today to do web programming. </p>
+                    </div>
+                    <div class="case fade-in" id="#FS">
+                        <p>In addition, through my 1 and half years of experience on Superprof, I've learned to teach, communicate and pass on my knowledge and the various information I've assimilated. So I can not only program beautiful websites, but also make a presentation that makes it easy for the target audience to understand the whys and wherefores. In short, a full stack developper teacher.</p>
+                    </div>
                 </div>
+            </div>
+            <div class="title fade-in" style="margin-top : 4%;">
+                <h2>MES FORMATIONS</h2>
+            </div>
+            <div class="ContainerResume">
+                <div class="resume">
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="circle fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="circle fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                </div>
+                <div class="ResumeTitle">
+                    <h2 class="fade-in" id="LI">Licence Informatique</h2>
+                    <h2 class="fade-in" id="BG">Baccalauréat Général</h2>
+                </div>
+                <div class="ResumeCase">
+                    <div class="case fade-in" id="#LI">
+                        <h2>2022 - 2025</h2>
+                        <p>Mineure économie gestion, photographie, science des données</p>
+                    </div>
+                    <div class="case fade-in" id="#BG">
+                        <h2>2019 - 2022</h2>
+                        <p>Spécialité Maths, Numérique Sciences Informatique, Sciences Physique, Chimie </p>
+                    </div>
+                </div>
+            </div>
+            <div class="title fade-in" style="margin-top : 4%;">
+                <h2>MES CERTIFICATIONS</h2>
+            </div>
+            <div class="ContainerResume">
+                <div class="resume">
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="circle fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                    <div class="lineR fade-in"></div>
+                </div>
+                <div class="ResumeTitle">
+                    <h2 class="fade-in" id="PIX">PIX</h2>
+                </div>
+                <div class="ResumeCase">
+                    <div class="case fade-in" id="#PIX">
+                        <h2>2021 & 2023</h2>
+                        <p>Certification de connaissance en bureautique </p>
+                    </div>
+                </div>
+            </div>
+            <div class="title fade-in" style="margin-top : 4%;">
+                <h2>MES SKILLS</h2>
             </div>
         </div>
     </div>
@@ -101,5 +163,37 @@
             }, 3000);
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Définir la fonction pour vérifier si l'élément est visible
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Fonction pour animer les éléments lorsqu'ils sont visibles
+            function handleScrollAnimations() {
+                var elements = document.querySelectorAll('.fade-in');
+
+                elements.forEach(function(element) {
+                    if (isElementInViewport(element)) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+
+            // Ajouter un gestionnaire de défilement
+            window.addEventListener('scroll', handleScrollAnimations);
+
+            // Appeler la fonction une fois au chargement initial
+            handleScrollAnimations();
+        });
+    </script>
+
 </body>
 </html>

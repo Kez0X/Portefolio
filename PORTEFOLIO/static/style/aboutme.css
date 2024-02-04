@@ -181,23 +181,83 @@ header .secondary-button button:hover{
     margin-left : -25px;
 }
 
+.container .ContainerResume .ResumeTitle{
+    text-align: left;
+}
+
 .container .ContainerResume .ResumeTitle h2{
     font-size : 2rem;
     color : #0094FF;
 }
 
 .container .ContainerResume #student{
-    margin-top : 210px;
+    margin-top : 200px;
     margin-left : 20px;
 }
 
+.container .ContainerResume #xp{
+    margin-top : 360px;
+    margin-left : 20px;
+}
+
+
+.container .ContainerResume #FS{
+    margin-top : 360px;
+    margin-left : 20px;
+}
+
+.container .ContainerResume #LI{
+    margin-top : 200px;
+    margin-left : 20px;
+}
+
+.container .ContainerResume #BG{
+    margin-top : 420px;
+    margin-left : 20px;
+}
+
+.container .ContainerResume #PIX{
+    margin-top : 200px;
+    margin-left : 20px;
+}
 .container .ContainerResume .case{
-    padding : 10px;
+    padding : 15px;
     border: #0094FF 2px solid;
     margin-left : 20%;
 }
 
-#student.case{
-    margin-top : 210px;
-    margin-left : 20px;
+#\#student {
+    margin-top : 200px;
+}
+
+#\#xp {
+    margin-top : 30%;
+}
+
+#\#FS {
+    margin-top : 30%;
+}
+
+#\#LI {
+    margin-top : 17%;
+}
+
+#\#BG {
+    margin-top : 40%;
+}
+
+#\#PIX {
+    margin-top : 25%;
+    margin-left : 50%;
+}
+
+/* Gestion du scroll lors de l'affichage */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
 }
