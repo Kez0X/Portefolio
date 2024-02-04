@@ -261,3 +261,59 @@ header .secondary-button button:hover{
 .fade-in.visible {
     opacity: 1;
 }
+
+.skills{
+    display : flex;
+}
+
+.skills .selector{
+    width : 50%;
+    flex : 1;
+}
+
+.skills .affichageSelector{
+    border : #0094FF 2px solid;
+    text-align: left;
+    margin-top : 5%;
+    width : 50%;
+    flex : 2;
+    padding : 15px;
+}
+
+.skills .affichageSelector p{
+   font-size: 2rem;
+}
+
+
+.skills .custom-selector {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    margin: 50px auto;
+}
+
+.skills .arrow {
+    padding: 5px 10px;
+    cursor: pointer;
+    background: none;
+    color : #0094FF;
+    border: none;
+    font-size: 6rem;
+}
+
+.skills .arrow.left{
+    margin-bottom : 100px;
+}
+
+.skills .arrow.right{
+    margin-top : 100px;
+}
+
+.skills #selectedElement {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 2rem ;
+    color : #0094FF;
+}

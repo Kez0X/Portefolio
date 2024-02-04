@@ -153,6 +153,16 @@
             <div class="title fade-in" style="margin-top : 4%;">
                 <h2>MES SKILLS</h2>
             </div>
+            <div class="skills fade-in" id="skills">
+                <div class="selector">
+                    <div class="custom-selector">
+                        <button class="arrow left" onclick="changeElement(-1)">&#x2191;</button>
+                        <span id="selectedElement">- PYTHON -</span>
+                        <button class="arrow right" onclick="changeElement(1)">&#x2193;</button>
+                    </div>
+                </div>
+                <div class="affichageSelector" id="affichageSelector"></div>
+            </div>
         </div>
     </div>
     <script>
@@ -193,6 +203,59 @@
             // Appeler la fonction une fois au chargement initial
             handleScrollAnimations();
         });
+
+        let currentElementIndex = 0;
+        var langages_dict = {
+            "PYTHON": {"description": "Python est un langage de programmation interprété, orienté objet et facile à apprendre.", "niveau": "Expert", "type": "Back-end"},
+            "JAVASCRIPT": {"description": "JavaScript est un langage de programmation de script côté client souvent utilisé pour créer des pages web interactives.", "niveau": "Intermédiaire", "type": "Front-end"},
+            "SQL": {"description": "SQL (Structured Query Language) est un langage de programmation conçu pour gérer et interroger des bases de données.", "niveau": "Expert", "type": "Base de données"},
+            "HTML5": {"description": "HTML5 est la dernière version du langage de balisage standard pour la création de pages web.", "niveau": "Expert", "type": "Front-end"},
+            "CSS3": {"description": "CSS3 est la dernière évolution du langage de feuilles de style en cascade utilisé pour styliser les pages web.", "niveau": "Intermédiaire", "type": "Front-end"},
+            "FLUTTER": {"description": "Flutter est un framework open-source de développement d'applications mobiles créé par Google.", "niveau": "Débutant", "type": "Mobile"},
+            "NODEJS": {"description": "Node.js est un environnement d'exécution JavaScript côté serveur, utilisé pour créer des applications réseau évolutives.", "niveau": "Intermédiaire", "type": "Back-end"},
+            "C": {"description": "Le langage de programmation C est un langage de programmation impératif créé pour le développement système.", "niveau": "Débutant", "type": "Système"},
+            "BASH": {"description": "Bash est un interpréteur de commandes Unix utilisé pour automatiser des tâches et scripter des processus.", "niveau": "Intermédiaire", "type": "Scripting"},
+            "EJS": {"description": "EJS (Embedded JavaScript) est un moteur de modèles JavaScript simple utilisé pour générer des pages HTML côté serveur.", "niveau": "Expert", "type": "Front-end"},
+            "FLASK": {"description": "Flask est un framework web léger en Python utilisé pour créer des applications web.", "niveau": "Débutant", "type": "Back-end"},
+            "ADOBE ILLUSTRATOR": {"description": "Adobe Illustrator est un logiciel de création graphique vectorielle utilisé pour la conception d'illustrations, de logos et plus encore.", "niveau": "Débutant", "type": "Design"},
+            "PHOTOSHOP": {"description": "Adobe Photoshop est un logiciel de retouche d'image, de montage photo et de conception graphique.", "niveau": "Débutant", "type": "Design"},
+            "CANVA": {"description": "Canva est une plateforme de conception graphique en ligne qui permet de créer divers types de documents graphiques.", "niveau": "Expert", "type": "Design"},
+            "MICROSOFT EXCEL": {"description": "Microsoft Excel est une application de tableur utilisée pour l'analyse de données, les calculs et la création de graphiques.", "niveau": "Intermédiaire", "type": "Bureautique"},
+            "MICROSOFT WORD": {"description": "Microsoft Word est un logiciel de traitement de texte largement utilisé pour la création de documents.", "niveau": "Expert", "type": "Bureautique"},
+            "FIREBASE": {"description": "Firebase est une plateforme de développement d'applications mobiles et web acquise par Google, offrant des services tels que la base de données en temps réel et l'authentification.", "niveau": "Débutant", "type": "Backend-as-a-Service (BaaS)"},
+            };
+        const elements =Object.keys(langages_dict);
+
+        function updateSelectedElement() {
+            document.getElementById("selectedElement").textContent = elements[currentElementIndex];
+            updateAffichageSelector();
+        }
+
+        function updateAffichageSelector() {
+            const selectedLangage = langages_dict[elements[currentElementIndex]];
+            const affichageSelector = document.getElementById("affichageSelector");
+            affichageSelector.innerHTML = `
+                <p><strong>DESCRIPTION :</strong> ${selectedLangage.description}</p>
+                <p><strong>NIVEAU DE MAITRISE :</strong> ${selectedLangage.niveau}</p>
+                <p><strong>TYPE :</strong> ${selectedLangage.type}</p>
+            `;
+        }
+
+        function changeElement(direction) {
+            currentElementIndex += direction;
+
+            if (currentElementIndex < 0) {
+                currentElementIndex = elements.length - 1;
+            } else if (currentElementIndex >= elements.length) {
+                currentElementIndex = 0;
+            }
+
+            updateSelectedElement();
+        }
+
+        // Initialisation
+        updateSelectedElement();
+
     </script>
 
 </body>
