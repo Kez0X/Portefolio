@@ -103,6 +103,17 @@ def get_project_info(project_id):
             'Pictures' : [],
             'status': {'id': 'Allowed', 'text': 'Code disponible', 'link': 'https://github.com/Kez0X/Jeu-de-l-ourson'}
         }
+    elif project_id == 9:
+        return {
+            'title': "Application de musique",
+            'langages': {'flutter': '100%'},
+            'description': "Une application musique pour s'introduire à flutter",
+            'worktime': '40h',
+            'DevDate': '2021',
+            'Image' : 'ourson.jpg',
+            'Pictures' : [],
+            'status': {'id': 'NotAllowed', 'text': 'Code non disponible'}
+        }
     else:
         return None
 
