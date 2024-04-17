@@ -1,188 +1,70 @@
-body{
-    background-image: url("/static/image/background.png");
-    background-size: cover;
-    color : white;
-    font-family: 'Cutive Mono';
-    overflow-x: hidden;
-}
-
-@media (min-width: 1000px) {
-    body{
-        overflow-y: hidden;
-    }
-  }
-
-
-@media (max-width: 1250px) {
-    body{
-        overflow-y:scroll;
-    }
-  }
-  
-
-header{
-    margin-top: -20px;
-    text-align: center;
-}
-
-.binary-button{
-    padding : 40px 10px;
-    background-color : rgba(0, 0, 0, 0.83);
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #02062C;
+    color: white;
+    width: 100%;
+    height: 100%;
     align-items: center;
-    text-align: center;
-    border-radius: 15px;
-    border : solid rgb(255, 255, 255) 2px;
-    width : 20%;
-    margin : auto;
 }
 
-/* Pour les boutons de la page d'accueil */
+header,
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
 
-.binary-button a{
-    text-transform: uppercase;
-    color : white;
+header .wrapper,
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav a {
+    color: white;
     text-decoration: none;
-    font-size: 1.3rem;
 }
 
-.binary-button a:hover{
-    font-weight: 900;
-    font-size: 1.6rem;
+header nav img,
+footer img {
+    height: 400px;
 }
 
-.container{
-    margin : 5%;
-    text-align: center;
-}
-
-.container .card{
-    display : flex;
-    margin : auto;
-    padding : 60px;
-    background-color: rgba(0, 0, 0, 0.83);
-    border : solid black 1px;
-    border-radius: 103px;
-}
-
-.container .card .column1{
-    flex : 1;
+#loginbutton {
+    border: 2px #00F0FF solid;
+    border-radius: 8px;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 20%;
-}
-
-.container .card .column1 .icon{
-    text-align: center;
     align-items: center;
+    justify-content: center;
+    height: max-content;
 }
 
-.container .card .column1 .icon img{
-    border : 3px solid #0094FF;
-    border-radius: 360px;
-    width : 40%;
-}
-
-.container .card .column1 .socialsSociaux .iconsSocials{
-    display : flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin : auto;
-    width : 70%;
-}
-
-
-.container .card .column1 .socialsSociaux .iconsSocials a{
-    margin : auto;
-}
-
-.container .card .column1 .socialsSociaux .iconsSocials img{
-    width : 10%;
-    margin : auto;
-}
-
-.container .card .column2{
-    flex : 2;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 80%;
-    text-align: left;
-}
-
-
-.container .card .column2 #title{
-    font-size: 4rem;
-    color : #0094FF;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-
-@-webkit-keyframes typing {
-    from {
-      width: 0;
-    }
-  }
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-  }
-  
-@-webkit-keyframes blink-caret {
-    50% {
-        border-color: transparent;
-    }
-}
-
-@keyframes blink-caret {
-    50% {
-        border-color: transparent;
-    }
-}
-
-.container .card .column2 #subtitle{
-    font-size: 3.5rem;
-    margin-top: 0;
-    border-right: .1em solid rgb(255, 255, 255);
-    width: 15.20ch;
-    white-space: nowrap;
-    animation :step-end infinite alternate;
-    -webkit-animation: typing 4s steps(15, end), blink-caret .4s step-end infinite alternate;
-}
-
-.container .card .column2 .text{
-    font-size: 1.2rem;
-}
-
-.container .card .column2 .button{
-    align-items: center;
-    margin-top : 3%;
-}
-
-.container .card .column2 .button button{
-    padding : 30px 100px;
-    border : solid 3px #0094FF;
-    border-radius : 25px;
-    background : transparent;
-    color : #0094FF;
+#loginbutton a {
+    font-size: smaller;
     text-transform: uppercase;
-    font-size: 1.5rem;
-    font-family: 'Cutive Mono';
-
+    text-decoration: none;
+    padding: 8px 12px;
+    color: #00F0FF;
 }
 
-.container .card .column2 .button button:hover{
-    background-color: #0094FF;
-    color : white;
-    border : solid 3px #0094FF;
-    cursor : pointer;
+#loginbutton:hover {
+    background-color: #00F0FF;
 }
 
-footer{
-    display : flex;
-    flex-wrap: wrap;
-    margin-bottom: -15px;
+#loginbutton:hover a {
+    color: white;
+}
+
+.wrapper {
+    width: 70%;
 }

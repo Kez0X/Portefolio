@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Cutive Mono' rel='stylesheet'>
-    <title>PORTEFOLIO - Accueil</title>
-    <link href="static/style/index.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="/static/image/Kez0X.ico">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style/loading.css') }}">
-</head>
-
-<body>
-    <div class="loading" id="loadingContainer">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Jacques Francois' rel='stylesheet'>
+        <title>PORTEFOLIO - Kez0X</title>
+        <link href="static/style/index.css" rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" href="/static/image/Kez0X.ico">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/loading.css') }}">
+    </head>
+    <body>
+        <div class="loading" id="loadingContainer">
             <div class="content">
                 <h1>MON PORTEFOLIO</h1>
                 <h2>BAUDRANT LUKA</h2>
@@ -29,105 +27,30 @@
                     <div></div>
                   </div>
             </div>
-    </div>
-    <header>
-        <div class="binary-button">
-            <a class="text-binary-button" href="mailto:luka.baudrant@gmail.com">ME CONTACTER</a>
         </div>
-    </header>
-    <div class="container">
-        <div class="card">
-            <div class="column1">
-                <div class="icon">
-                    <img src="static/image/Kez0X.png" />
-                </div>
-                <div class="socialsSociaux">
-                    <h2>RESEAUX SOCIAUX</h2>
-                    <div class="iconsSocials">
-                        <a href="https://www.instagram.com/luka_lcn/"><img style="width : 50px"
-                                src="static/image/instagram.png" /></a>
-                        <!--Icône de Pixel Perfect sur flaticon https://www.flaticon.com/fr/auteurs/pixel-perfect-->
-                        <a href="https://www.linkedin.com/in/luka-baudrant-89799025a/"><img style="width : 50px"
-                                src="static/image/linkedin.png" /></a>
-                        <!--Icône de riajulislam sur flaticon https://www.flaticon.com/fr/auteurs/riajulislam-->
-                        <a href="https://github.com/Kez0X"><img style="width : 50px"
-                                src="static/image/github.png" /></a>
-                        <!--Icône de vector-stall sur flaticon https://www.flaticon.com/fr/auteurs/vector-stall-->
+        <header>
+            <div class="wrapper">
+                <a href="/">
+                    <img src="../static/image/LogoB.png" alt="">
+                </a>
+                <nav>
+                    <a href="">Me contacter</a>
+                    <a href="">À propos de moi</a>
+                    <a href="">Mes compétences</a>
+                    <a href="">Mes projets</a>
+                    <div id="loginbutton">
+                        <a href="/login">Resume</a>
                     </div>
-                </div>
+                </nav>
             </div>
-            <div class="column2">
-                <h1 id="title">BAUDRANT LUKA</h1>
-                <h1 id="subtitle" class="animate-text">FULL STACK DEV_</h1>
-                <div class="text">
-                    <p>Je suis étudiant en licence d'informatique à l'Université Lyon 2, co-fondateur du site 
-                        school.vld-group.com et enseignant sur le site de cours en ligne superprof.fr . Vous 
-                        pouvez consulter mes compétences et mes projets directement sur ce site.</p>
-                </div>
-                <div class="button">
-                    <button onclick="window.location.href='/aboutme'">MON RESUME</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div class="binary-button">
-            <a class="text-binary-button" href="/aboutme">A PROPOS DE MOI</a>
-        </div>
-        <div class="binary-button">
-            <a class="text-binary-button" href="/aboutme#skills">MES COMPETENCES</a>
-        </div>
-        <div class="binary-button">
-            <a class="text-binary-button" href="/projects">MES PROJETS</a>
-        </div>
-    </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Cacher le chargement après 3 secondes (3000 millisecondes)
-            setTimeout(function() {
-                document.getElementById('loadingContainer').style.display = 'none';
-            }, 3000);
-        });
-    </script>
-</body>
-
-<script>
-    "use strict";
-    window.addEventListener("DOMContentLoaded", (event) => {
-        animate_text();
-    });
-    // -------------------
-    function animate_text() {
-        let delay = 300,
-            delay_start = 0,
-            contents,
-            letters;
-
-        document.querySelectorAll(".animate-text").forEach(function (elem) {
-            contents = elem.textContent.trim();
-            elem.textContent = "";
-            letters = contents.split("");
-            elem.style.visibility = 'visible';
-
-            letters.forEach(function (letter, index_1) {
-                setTimeout(function () {
-                    // ---------
-                    // effet machine à écrire (SIMPLE)
-                    elem.textContent += letter;
-                    // ---------
-                    // OU :
-                    // effet machine à écrire + animation CSS (SPECIAL)
-                    /*
-                    var span = document.createElement('span');
-                    span.innerHTML = letter.replace(/ /,'&nbsp;');
-                    elem.appendChild(span);
-            */
-                    // ---------
-                }, delay_start + delay * index_1);
+        </header>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Cacher le chargement après 5 secondes (5000 millisecondes)
+                setTimeout(function() {
+                    document.getElementById('loadingContainer').style.display = 'none';
+                }, 5000);
             });
-            delay_start += delay * letters.length;
-        });
-    }
-</script>
-
+        </script>
+    </body>
 </html>
