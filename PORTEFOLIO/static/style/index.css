@@ -149,6 +149,16 @@ body {
 }
 
 .presentation-description a{
+    text-decoration: none;
+    color : #00F0FF;
+    opacity: 100% !important;
+}
+
+.presentation-description a:hover{
+    color : #018f99;
+}
+
+.presentation-description .presentation-projects-link a{
     justify-content: center;
     text-decoration: none;
     margin-top: 20px;
@@ -158,10 +168,14 @@ body {
     border-radius: 15px;
 }
 
-.presentation-description a:hover{
+.presentation-description .presentation-projects-link a:hover{
     background-color : #00F0FF;
     color :white;
-}    
+}
+
+#instagram{
+    color : linear-gradient(#FAFF00, #E400CE)
+}
 
 
 @media(min-width:920px){
@@ -201,6 +215,7 @@ body {
         flex-direction: column;
         justify-content: center;
         background-color : #02062C;
+        margin-top: -4rem;
     }
 
     .menu-listing{
@@ -228,6 +243,7 @@ body {
         display : flex;
         flex-direction:column-reverse;
         width : 90%;
+        margin-top: -46rem;
     }
 
     .presentation-description{
@@ -244,7 +260,10 @@ body {
     }
 
     .presentation-links{
-        margin-top : 20px;
+        margin-top : 50px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
     }
 
 
