@@ -6,7 +6,8 @@
 body {
     height : 400vh;
     background-color: #02062C;
-    
+    font-family: Jacques Francois;
+    color : white;
 }
 
 .material-icons{
@@ -20,7 +21,7 @@ body {
     width: 100%;
     padding-top : 20px;
     padding-bottom: 20px;
-    z-index : 997;
+    z-index : 996;
 }
 
 .menu-container{
@@ -62,7 +63,7 @@ body {
     top : 0;
     height : 80px;
     background : #02062C;
-    z-index : 998;
+    z-index : 997;
     padding-inline : 20px;
     box-sizing: border-box;
     display : flex;
@@ -70,16 +71,110 @@ body {
     display : none;
 }
 
+.presentation-container{
+    z-index : 995;
+    display : flex;
+    margin: 20%;
+    width : 60%;
+    justify-content: center;
+    margin-top : 10%;
+}
+
+.presentation-links{
+    display : flex;
+    flex-direction: column;
+    margin-left : 10%;
+}
+
+.presentation-symbole img{
+    width : 200px;
+    border-radius: 360px;
+}
+
+.presentation-socials{
+    display: flex;
+    flex-direction: column;
+    margin-left : 10px;
+}
+
+.presentation-socials-item{
+    justify-content: center;
+    align-items: center;
+    display : flex;
+    margin-top : 10px;
+}
+
+.presentation-socials-item img{
+    width : 50px;
+}
+
+.presentation-socials-item p{
+    justify-content: center;
+    width : 70%;
+    margin-left : 10%;
+}
+
+.presentation-description{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px;
+}
+
+.presentation-description #Hello{
+    color : #00F0FF;
+    opacity: 100%;
+}
+
+.presentation-description h1{
+    font-family:Italiana;
+    font-size: 3rem;
+    padding: 10px 0px;
+}
+
+.presentation-description h2{
+    font-family:Italiana;
+    font-size: 2rem;
+    padding: 10px 0px;
+    opacity: 60%;
+}
+
+.presentation-description p{
+    padding: 10px 0px;
+    opacity: 60%;
+}
+
+.presentation-projects-link{
+    margin-top : 30px;
+    justify-content: center;
+}
+
+.presentation-description a{
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 20px;
+    padding : 10px 25px;
+    border : #00F0FF solid 1px;
+    color : #00F0FF;
+    border-radius: 15px;
+}
+
+.presentation-description a:hover{
+    background-color : #00F0FF;
+    color :white;
+}    
+
+
 @media(min-width:920px){
     #resume{
         padding : 10px 25px;
         border : #00F0FF solid 1px;
-        color : white;
+        color : #00F0FF;
         border-radius: 15px;
     }
     
     #resume:hover{
         background-color : #00F0FF;
+        color :white;
     }    
 }
 
@@ -87,7 +182,8 @@ body {
 @media(max-width:920px){
 
     body {
-        overflow: hidden;
+        overflow-x: hidden;
+        justify-content: center;
     }
 
     .menu{
@@ -104,6 +200,7 @@ body {
         height : 100vh;
         flex-direction: column;
         justify-content: center;
+        background-color : #02062C;
     }
 
     .menu-listing{
@@ -123,6 +220,31 @@ body {
 
     #toggler{
         cursor: pointer;
+    }
+
+    .presentation-container{
+        margin-left : 5%;
+        z-index : 996;
+        display : flex;
+        flex-direction:column-reverse;
+        width : 90%;
+    }
+
+    .presentation-description{
+        margin-top: 0px;
+    }
+
+
+    .presentation-description h1{
+        font-size: 2rem;
+    }
+
+    .presentation-description h2{
+        font-size: 1.5rem;
+    }
+
+    .presentation-links{
+        margin-top : 20px;
     }
 
 
