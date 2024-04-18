@@ -1,56 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='https://fonts.googleapis.com/css?family=Jacques Francois' rel='stylesheet'>
-        <title>PORTEFOLIO - Kez0X</title>
-        <link href="static/style/index.css" rel="stylesheet" />
-        <link rel="icon" type="image/x-icon" href="/static/image/Kez0X.ico">
-        <link rel="stylesheet" href="{{ url_for('static', filename='style/loading.css') }}">
-    </head>
-    <body>
-        <div class="loading" id="loadingContainer">
-            <div class="content">
-                <h1>MON PORTEFOLIO</h1>
-                <h2>BAUDRANT LUKA</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Jacques Francois' rel='stylesheet'>
+    <title>PORTEFOLIO - Kez0X</title>
+    <link href="static/style/index.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/static/image/Kez0X.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/loading.css') }}">
+</head>
+<body>
+    <div class="loading" id="loadingContainer">
+        <div class="terminal-loader" >
+            <div class="terminal-header">
+                <div class="terminal-title">Status</div>
+                <div class="terminal-controls">
+                    <div class="control close"></div>
+                    <div class="control minimize"></div>
+                    <div class="control maximize"></div>
+                </div>
             </div>
-            <div class="load">
-                <div class="honeycomb">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-            </div>
+            <div class="text">Loading...</div>
         </div>
-        <header>
-            <div class="wrapper">
-                <a href="/">
-                    <img src="../static/image/LogoB.png" alt="">
-                </a>
-                <nav>
-                    <a href="">Me contacter</a>
-                    <a href="">À propos de moi</a>
-                    <a href="">Mes compétences</a>
-                    <a href="">Mes projets</a>
-                    <div id="resume">
-                        <a href="/login">Resume</a>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                // Cacher le chargement après 5 secondes (5000 millisecondes)
-                setTimeout(function() {
-                    document.getElementById('loadingContainer').style.display = 'none';
-                }, 5000);
-            });
-        </script>
-    </body>
+    </div>
+    <div class="mobile-menu">
+        <span class="material-icons" onclick="toggler()" id="toggler">menu</span>
+    </div>
+    <div class="menu">
+        <div class="menu-container">
+            <a href="/" class="logo">
+                <img src="../static/image/LogoB.png" alt="">
+            </a>
+            <ul class="menu-listing">
+                <li><a href="/">Me contacter</a></li>
+                <li><a href="/">À propos de moi</a></li>
+                <li><a href="/">Mes compétences</a></li>
+                <li><a href="/">Mes projets</a></li>
+                <li><a id="resume" href="/">Résumé</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Cacher le chargement après 3 secondes (5000 millisecondes)
+            setTimeout(function() {
+                document.getElementById('loadingContainer').style.display = 'none';
+            }, 5000);
+        });
+
+        function toggler(){
+            const icon = document.querySelector("#toggler")
+            const menu = document.querySelector('.menu')
+            if (icon.innerHTML == "menu"){
+                icon.innerHTML = "close";
+                menu.style.transform = "translateX(0%)"
+            } else {
+                icon.innerHTML = "menu";
+                menu.style.transform = "translateX(-100%)"
+            }
+        }
+    </script>
+</body>
 </html>

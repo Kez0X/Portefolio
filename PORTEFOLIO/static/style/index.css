@@ -1,71 +1,129 @@
-html,
+* {
+    margin : 0;
+    padding : 0;
+}
+
 body {
-    padding: 0;
-    margin: 0;
-    color: white;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-}
-
-header,
-footer {
+    height : 400vh;
     background-color: #02062C;
+    
+}
+
+.material-icons{
+    color  :white;
+}
+
+.menu{
+    position : sticky;
+    top : 0;
+    display: block;
     width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
+    padding-top : 20px;
+    padding-bottom: 20px;
+    z-index : 997;
 }
 
-header .wrapper,
-footer .wrapper {
-    display: flex;
-    justify-content: space-between;
+.menu-container{
+    display : flex;
     align-items: center;
+    justify-content : space-between;
+    max-width: 1200px;
+    margin-inline: auto;
 }
 
-header nav {
-    display: flex;
+.logo{
+    display : block;
+    width : 200px;
+}
+
+.logo img{
+    width : 100%;
+}
+
+.menu-listing{
+    display : flex;
     align-items: center;
-    gap: 30px;
+    list-style: none;
 }
 
-header nav a {
-    color: white;
+.menu-listing a{
     text-decoration: none;
+    color : rgb(255, 255, 255);
+    padding : 10px 20px;
 }
 
-header nav img,
-footer img {
-    height: 400px;
+.menu-listing a:hover{
+    font-weight: bolder;
 }
 
-#resume {
-    border: 2px #00F0FF solid;
-    border-radius: 8px;
-    display: flex;
+.mobile-menu{
+    width : 100%;
+    position: sticky;
+    top : 0;
+    height : 80px;
+    background : #02062C;
+    z-index : 998;
+    padding-inline : 20px;
+    box-sizing: border-box;
+    display : flex;
     align-items: center;
-    justify-content: center;
-    height: max-content;
-    padding : 1% 6%;
+    display : none;
 }
 
-#resume a {
-    font-size: smaller;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 8px 12px;
-    color: #00F0FF;
+@media(min-width:920px){
+    #resume{
+        padding : 10px 25px;
+        border : #00F0FF solid 1px;
+        color : white;
+        border-radius: 15px;
+    }
+    
+    #resume:hover{
+        background-color : #00F0FF;
+    }    
 }
 
-#resume:hover {
-    background-color: #00F0FF;
-}
 
-#resume:hover a {
-    color: white;
-}
+@media(max-width:920px){
 
-.wrapper {
-    width: 70%;
+    body {
+        overflow: hidden;
+    }
+
+    .menu{
+        transform : translateX(-100%);
+        transition : .3s ease;
+    }
+
+    .mobile-menu{
+        display : flex;
+    }
+
+    .menu-container {
+        width : 100%;
+        height : 100vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-listing{
+        flex-direction: column;
+    }
+
+    .menu-listing a{
+        box-sizing: border-box;
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .logo{
+        width : 180px;
+        margin-bottom: 20px;
+    }
+
+    #toggler{
+        cursor: pointer;
+    }
+
+
 }
