@@ -207,6 +207,7 @@ body {
 
 .say-hello-container a{
     color : #00F0FF;
+    text-decoration: none;
 }
 
 #instagram{
