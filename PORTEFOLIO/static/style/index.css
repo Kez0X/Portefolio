@@ -327,6 +327,99 @@ body {
     opacity: 60%;
 }
 
+.projects{
+    margin : 20%;
+    margin-top : -10%;
+    width : 60%;
+}
+
+.projects h1{
+    font-family:Italiana;
+    font-size: 2rem;
+}
+
+.projects-container{
+    display : flex;
+    flex-wrap: wrap;
+}
+
+.projects-card{
+    text-align: center;
+    border-radius: 15px;
+    border : #ffffff solid 3px;
+    width : 30%;
+    background-color: white;
+    margin-right : 20px;
+    margin-top : 20px;
+    min-height : 500px;
+}
+
+.projects-symbole{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction : column;
+    border-radius: 15px;
+    background-color:#02062C;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+.projects-symbole img{
+    width : 200px;
+}
+
+.projects-symbole a{
+    margin-top : 20px;
+    padding : 4px 20px;
+    background-color: #f9b727;
+    color : white;
+    text-decoration: none;
+    border-radius: 7px;
+    border : rgb(0, 0, 0) solid 2px;
+}
+
+.projects-symbole a:hover{
+    background-color: #fb6000;
+}
+
+.projects-description{
+    display : none;
+}
+
+.projects-card:hover {
+    min-height : 600px;
+    .projects-symbole{
+        min-height: 75%;
+        max-height: 75%;
+    }
+    .projects-description{
+        display : flex;
+    }
+}
+
+.projects-logo{
+    border-radius: 15px;
+    min-height: 15%;
+    max-height: 15%;
+}
+
+.projects-logo img{
+    width : 100px;
+}
+
+.projects-card h2{
+    font-family:Italiana;
+    font-size: 2rem;
+}
+
+.projects-card p{
+    padding : 10px 60px;
+    opacity: 60%;
+}
+
+
+
 #instagram{
     color : linear-gradient(#FAFF00, #E400CE)
 }
