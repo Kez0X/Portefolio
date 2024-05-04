@@ -385,16 +385,52 @@ body {
 
 .projects-description{
     display : none;
+    color : black;
+}
+
+.projects-description a{
+    margin-top : 5px;
+    padding : 20px 5px;
+    background-color: #f9b727;
+    text-decoration: none;
+}
+
+
+.projects-contributor{
+    color : black;
+    text-align: center;
+    display : none;
+}
+
+.projects-language{
+    display : none;
+    padding-left : 140px;
+    text-align: left;
+    opacity : 60%;
+}
+
+.projects-language img{
+    max-width : 30px;
 }
 
 .projects-card:hover {
-    min-height : 600px;
+    min-height : 700px;
+    transition: 3s ease;
     .projects-symbole{
-        min-height: 75%;
-        max-height: 75%;
+        min-height: 500px;
+        max-height: 500px;
     }
     .projects-description{
+        display : block;
+    }
+    .projects-contributor{
+        display : block;
+        transition : 3s ease;
+    }
+    .projects-language{
         display : flex;
+        flex-wrap: wrap;
+        transition: 3s ease;
     }
 }
 
