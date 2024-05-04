@@ -351,7 +351,7 @@ body {
     background-color: white;
     margin-right : 20px;
     margin-top : 20px;
-    min-height : 500px;
+    min-height : 550px;
 }
 
 .projects-symbole{
@@ -361,8 +361,8 @@ body {
     flex-direction : column;
     border-radius: 15px;
     background-color:#02062C;
-    min-height: 100%;
-    max-height: 100%;
+    min-height: 550px;
+    max-height: 550px;
 }
 
 .projects-symbole img{
@@ -377,6 +377,7 @@ body {
     text-decoration: none;
     border-radius: 7px;
     border : rgb(0, 0, 0) solid 2px;
+    font-family: Jacques Francois;
 }
 
 .projects-symbole a:hover{
@@ -389,12 +390,15 @@ body {
 }
 
 .projects-description a{
-    margin-top : 5px;
-    padding : 20px 5px;
+    margin-top : 20px;
+    margin-bottom: 20px;
+    padding : 5px 20px;
     background-color: #f9b727;
     text-decoration: none;
+    border-radius: 5px;
+    color : white;
+    font-family: Jacques Francois;
 }
-
 
 .projects-contributor{
     color : black;
@@ -404,7 +408,7 @@ body {
 
 .projects-language{
     display : none;
-    padding-left : 140px;
+    padding-left : 40%;
     text-align: left;
     opacity : 60%;
 }
@@ -417,8 +421,8 @@ body {
     min-height : 700px;
     transition: 3s ease;
     .projects-symbole{
-        min-height: 500px;
-        max-height: 500px;
+        min-height: 550px;
+        max-height: 550px;
     }
     .projects-description{
         display : block;
@@ -598,6 +602,40 @@ body {
 
     .certifications-card{
         width : 100%;
+    }
+
+    .projects-card{
+        width : 100%;
+    }
+
+    .projects-card{
+        min-height : 800px;
+    }
+
+    .projects-symbole{
+        min-height: 800px;
+        max-height: 800px;
+    }
+
+    .projects-card:hover {
+        min-height : 1050px;
+        transition: 3s ease;
+        .projects-symbole{
+            min-height: 800px;
+            max-height: 800px;
+        }
+        .projects-description{
+            display : block;
+        }
+        .projects-contributor{
+            display : block;
+            transition : 3s ease;
+        }
+        .projects-language{
+            display : flex;
+            flex-wrap: wrap;
+            transition: 3s ease;
+        }
     }
 
 }
