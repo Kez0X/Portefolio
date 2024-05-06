@@ -4,7 +4,6 @@
 }
 
 body {
-    height : 1400vh;
     background-color: #02062C;
     font-family: Jacques Francois;
     color : white;
@@ -351,7 +350,7 @@ body {
     background-color: white;
     margin-right : 20px;
     margin-top : 20px;
-    min-height : 550px;
+    min-height : 60%;
 }
 
 .projects-symbole{
@@ -361,8 +360,8 @@ body {
     flex-direction : column;
     border-radius: 15px;
     background-color:#02062C;
-    min-height: 550px;
-    max-height: 550px;
+    min-height: 100%;
+    max-height: 100%;
 }
 
 .projects-symbole img{
@@ -417,27 +416,6 @@ body {
     max-width : 30px;
 }
 
-.projects-card:hover {
-    min-height : 700px;
-    transition: 3s ease;
-    .projects-symbole{
-        min-height: 550px;
-        max-height: 550px;
-    }
-    .projects-description{
-        display : block;
-    }
-    .projects-contributor{
-        display : block;
-        transition : 3s ease;
-    }
-    .projects-language{
-        display : flex;
-        flex-wrap: wrap;
-        transition: 3s ease;
-    }
-}
-
 .projects-logo{
     border-radius: 15px;
     min-height: 15%;
@@ -458,6 +436,31 @@ body {
     opacity: 60%;
 }
 
+.stage{
+    margin : 20%;
+    margin-top : -10%;
+    width : 60%;
+}
+
+.stage h1{
+    font-family:Italiana;
+    font-size: 2rem;
+}
+
+.stage p{
+    padding : 10px 60px;
+    opacity: 60%;
+}
+
+.stage a{
+    text-decoration: none;
+    color : #00F0FF;
+    opacity: 100% !important;
+}
+
+.stage a:hover{
+    color : #018f99;
+}
 
 
 #instagram{
@@ -607,35 +610,4 @@ body {
     .projects-card{
         width : 100%;
     }
-
-    .projects-card{
-        min-height : 800px;
-    }
-
-    .projects-symbole{
-        min-height: 800px;
-        max-height: 800px;
-    }
-
-    .projects-card:hover {
-        min-height : 1050px;
-        transition: 3s ease;
-        .projects-symbole{
-            min-height: 800px;
-            max-height: 800px;
-        }
-        .projects-description{
-            display : block;
-        }
-        .projects-contributor{
-            display : block;
-            transition : 3s ease;
-        }
-        .projects-language{
-            display : flex;
-            flex-wrap: wrap;
-            transition: 3s ease;
-        }
-    }
-
 }

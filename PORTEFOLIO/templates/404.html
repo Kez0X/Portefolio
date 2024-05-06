@@ -12,20 +12,16 @@
 </head>
 <body>
     <div class="loading" id="loadingContainer">
-        <div class="content">
-            <h1>MON PORTEFOLIO</h1>
-            <h2>BAUDRANT LUKA</h2>
-        </div>
-        <div class="load">
-            <div class="honeycomb">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
+        <div class="terminal-loader" >
+            <div class="terminal-header">
+                <div class="terminal-title">Status</div>
+                <div class="terminal-controls">
+                    <div class="control close"></div>
+                    <div class="control minimize"></div>
+                    <div class="control maximize"></div>
+                </div>
+            </div>
+            <div class="text">Loading...</div>
         </div>
     </div>
     <div class="container">
@@ -38,11 +34,23 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Cacher le chargement après 3 secondes (3000 millisecondes)
+            // Cacher le chargement après 3 secondes (5000 millisecondes)
             setTimeout(function() {
                 document.getElementById('loadingContainer').style.display = 'none';
-            }, 3000);
+            }, 5000);
         });
+
+        function toggler(){
+            const icon = document.querySelector("#toggler")
+            const menu = document.querySelector('.menu')
+            if (icon.innerHTML == "menu"){
+                icon.innerHTML = "close";
+                menu.style.transform = "translateX(0%)"
+            } else {
+                icon.innerHTML = "menu";
+                menu.style.transform = "translateX(-100%)"
+            }
+        }
     </script>
 </body>
 </html>
