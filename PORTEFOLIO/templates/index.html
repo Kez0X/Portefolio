@@ -41,12 +41,142 @@
                 <div></div>
             </div>
         </nav>
+        <canvas id="skills-canvas"></canvas>
+        <main class="main-section">
+            <!-- Logo et description -->
+            <div class="intro">
+                <img src="../static/image/Kez0X.png" alt="Logo" class="main-logo">
+                <div class="description">
+                    <h1>Bienvenue sur mon portfolio</h1>
+                    <p>
+                        Je suis <strong>BAUDRANT Luka</strong>, développeur passionné par la création de solutions innovantes. 
+                        Je maîtrise plusieurs langages de programmation et technologies. 
+                        Découvrez mes projets et compétences sur cette page, ou contactez-moi via les réseaux ci-dessous !
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Liens de contact -->
+            <div class="contact-channels">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="../static/image/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <img src="../static/image/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="mailto:kezox@example.com" aria-label="Email">
+                    <img src="../static/image/email.svg" alt="Email">
+                </a>
+                <a href="https://github.com" target="_blank" aria-label="GitHub">
+                    <img src="../static/image/github.png" alt="GitHub">
+                </a>
+            </div>
+        </main>
+        <section id="about" class="about-section">
+            <h2>À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Bonjour ! Je suis <strong>Luka BAUDRANT</strong>, 
+                        un développeur web freelance passionné par la création de solutions numériques innovantes. 
+                        Découvrez <a href="#projects-code" class="about-link">mes projets</a>.
+                    </p>
+                    <p>
+                        En parallèle, je suis formateur et professeur en informatique, 
+                        proposant des cours aux particuliers et entreprises pour leur permettre 
+                        de maîtriser les outils et technologies du développement.
+                    </p>
+                    <p>
+                        Actuellement, je suis étudiant en <strong>3ᵉ année de Licence Informatique</strong> à 
+                        l’Université Lyon 2, spécialisation <em>Data Science</em>.
+                    </p>
+                </div>
+                <div class="about-timeline">
+                    <h3>Mon parcours</h3>
+                    <ul class="timeline">
+                        <li>
+                            <span>2021 - Aujourd'hui</span>
+                            <strong>Licence Informatique</strong> – Université Lyon 2, spécialisation Data Science
+                        </li>
+                        <li>
+                            <span>2020</span>
+                            <strong>Baccalauréat Scientifique</strong> – Lycée X, spécialité Mathématiques
+                        </li>
+                        <li>
+                            <span>2017</span>
+                            Début de ma passion pour le développement et la programmation.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
     
         <script>
             function toggleMenu() {
                 const navLinks = document.querySelector('.nav-links');
+                const hamburger = document.querySelector('.hamburger');
                 navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active'); // Ajoute l'animation du hamburger
             }
+
+            const canvas = document.getElementById("skills-canvas");
+            const ctx = canvas.getContext("2d");
+
+            const logos = [
+                { src: "../static/image/javascript.png", x: 0, y: 0, dx: 2, dy: 1 },
+                { src: "../static/image/csharp.png", x: 100, y: 50, dx: -2, dy: 1.5 },
+                { src: "../static/image/cpp.png", x: 200, y: 100, dx: 1, dy: -1 },
+                { src: "../static/image/c.png", x: 300, y: 150, dx: -1, dy: 2 },
+                { src: "../static/image/vuejs.png", x: 400, y: 200, dx: 2, dy: -1 },
+                { src: "../static/image/svelte.png", x: 500, y: 250, dx: -2, dy: 2 },
+                { src: "../static/image/sql.png", x: 600, y: 300, dx: 1, dy: -1 },
+                { src: "../static/image/mariadb.svg", x: 700, y: 350, dx: -1.5, dy: 2 },
+                { src: "../static/image/fedora.png", x: 800, y: 400, dx: 2, dy: -2 },
+                { src: "../static/image/bash.png", x: 900, y: 450, dx: -1.5, dy: 1.5 },
+                { src: "../static/image/python.png", x: 1000, y: 500, dx: 2, dy: -2 },
+                { src: "../static/image/css.png", x: 1100, y: 550, dx: -2, dy: 1 },
+                { src: "../static/image/html.png", x: 1200, y: 600, dx: 1.5, dy: -1 },
+                { src: "../static/image/flask.png", x: 1300, y: 650, dx: -2, dy: -1 },
+                { src: "../static/image/ejs.png", x: 1400, y: 700, dx: 2, dy: 1 },
+                { src: "../static/image/github.png", x: 1500, y: 750, dx: -1, dy: -2 }
+            ];
+
+            const images = [];
+
+            logos.forEach(logo => {
+                const img = new Image();
+                img.src = logo.src;
+                img.onload = () => images.push({ ...logo, img });
+            });
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                images.forEach(logo => {
+                    ctx.drawImage(logo.img, logo.x, logo.y, 50, 50);
+                    logo.x += logo.dx;
+                    logo.y += logo.dy;
+
+                    // Rebonds
+                    if (logo.x <= 0 || logo.x + 50 >= canvas.width) logo.dx *= -1;
+                    if (logo.y <= 0 || logo.y + 50 >= canvas.height) logo.dy *= -1;
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            // Ajuste le canvas lors du redimensionnement
+            window.addEventListener("resize", () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+
         </script>
     </body>
 </html>

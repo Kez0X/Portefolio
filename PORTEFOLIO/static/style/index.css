@@ -1,6 +1,9 @@
 body {
-            margin: 0;
-            font-family: Arial, sans-serif;
+        margin: 0;
+        font-family: 'Poppins', Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        text-align: center;
         }
 
         /* Navbar container */
@@ -81,6 +84,184 @@ body {
             margin: 3px 0;
         }
 
+        .main-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+        }
+        
+        /* Logo */
+        .main-logo {
+            max-width: 250px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            .logo-container {
+            position: relative; /* Permet de masquer l’animation derrière */
+            z-index: 1; /* Au-dessus du canvas */
+            background-color: #fff; /* Fond opaque pour cacher l’animation */
+            padding: 1rem; /* Espacement autour du logo */
+            text-align: center;
+            border-radius: 10px; /* Optionnel : coins arrondis */
+            display: inline-block; /* Ajuste la taille au contenu */
+            margin: 2rem auto; /* Centre horizontalement */
+            }
+            
+        }
+        
+        /* Description */
+        .description {
+            max-width: 600px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .description h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .description p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Canaux de contact */
+        .contact-channels {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-channels a {
+            text-decoration: none;
+        }
+        
+        .contact-channels img {
+            max-width: 40px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        .contact-channels img:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+
+        /* Section À propos de moi */
+        .about-section {
+            padding: 4rem 1rem;
+            background-color: #f7f7f7;
+            color: #333;
+            text-align: center;
+            position: relative;
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            max-width: 800px;
+        }
+
+        .about-link {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .about-link:hover {
+            color: #0056b3;
+        }
+
+        .about-timeline {
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .about-timeline h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .timeline {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline li {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .timeline span {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+
+        #skills-canvas {
+            position: fixed; /* Arrière-plan sur toute la page */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Sous tout le contenu */
+            pointer-events: none; /* Pas d'interactions utilisateur */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .about-timeline {
+                text-align: center;
+            }
+
+            .timeline li {
+                font-size: 0.9rem;
+            }
+        }
+
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .description h1 {
+                font-size: 1.5rem;
+            }
+        
+            .description p {
+                font-size: 0.9rem;
+            }
+        
+            .contact-channels img {
+                max-width: 35px;
+            }
+        }
+
         /* Responsive design */
         @media (max-width: 768px) {
             .navbar .nav-links {
@@ -90,17 +271,47 @@ body {
                 top: 100%;
                 left: 0;
                 right: 0;
-                background-color: #ffffff;
+                background-color: rgba(255, 255, 255, 0.9);
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 padding: 1rem;
                 z-index: 999;
+                text-align: center; /* Centre le texte */
+                opacity: 0; /* Masque le menu avant l'animation */
+                transform: translateY(-10px); /* Ajoute un effet de déplacement */
+                transition: opacity 0.3s ease, transform 0.3s ease; /* Animation */
+                
             }
 
             .navbar .nav-links.active {
                 display: flex;
+                opacity: 1; /* Rétablit la visibilité */
+                transform: translateY(0); /* Ramène le menu à sa position initiale */
             }
+
+            .navbar .nav-links a {
+                display: block; /* Les liens prennent toute la largeur */
+                padding: 0.5rem 0; /* Espacement vertical */
+                font-size: 1.2rem; /* Augmente la taille de la police */
+            }
+            
 
             .navbar .hamburger {
                 display: flex;
+            }
+
+            .navbar .hamburger div {
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+            
+            .navbar .hamburger.active div:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px); /* Barre supérieure */
+            }
+            
+            .navbar .hamburger.active div:nth-child(2) {
+                opacity: 0; /* Barre du milieu devient invisible */
+            }
+            
+            .navbar .hamburger.active div:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px); /* Barre inférieure */
             }
         }
