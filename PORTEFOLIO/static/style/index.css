@@ -239,9 +239,9 @@ body {
         }
 
         .projects-section h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 2rem;
-            color: #007BFF;
+            font-weight: bold;
         }
 
         .projects-container {
@@ -260,9 +260,23 @@ body {
             padding: 1.5rem;
             text-align: left;
             width: 100%;
-            max-width: 700px;
+            max-width: 750px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        /* Responsiveness: Projets sur les petits écrans */
+        @media (max-width: 768px) {
+            .projects-container {
+                grid-template-columns: 1fr; /* Afficher une carte par ligne sur les petits écrans */
+                margin : 2rem;
+            }
+
+            .project-card {
+                width: 100%; /* S'assurer que la carte prend toute la largeur disponible */
+                max-width: none; /* Enlever la largeur maximale pour les petits écrans */
+            }
+        }
+
 
         .project-card:hover {
             transform: translateY(-5px);
@@ -271,7 +285,6 @@ body {
 
         /* Titre et étiquettes */
         .project-header {
-            display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1rem;
@@ -351,133 +364,333 @@ body {
         }
 
         /* Styles spécifiques à la section des projets professionnels */
-/* Section Projets Pro */
-/* Section Projets Professionnels */
-.projects-pro-section {
-    padding: 4rem 2rem;
-    background-color: #f9f9f9;
-    text-align: center;
-}
+        /* Section Projets Pro */
+        /* Section Projets Professionnels */
+        .projects-pro-section {
+            padding: 4rem 2rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
 
-.projects-pro-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
+        .projects-pro-section h2{
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
 
-/* Cartes */
-.project-pro-card {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    width: 60%;
-    max-width: 800px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .projects-pro-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
 
-.project-pro-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
+        /* Cartes */
+        .project-pro-card {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            width: 60%;
+            max-width: 800px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-/* Images */
-.project-pro-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.5rem;
-    padding: 1rem;
-}
+        .project-pro-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
 
-.project-pro-images img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-}
+        /* Images */
+        .project-pro-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+            padding: 1rem;
+        }
 
-/* Détails */
-.project-pro-details {
-    padding: 1.5rem;
-}
+        .project-pro-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
 
-.project-pro-details h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
+        /* Détails */
+        .project-pro-details {
+            padding: 1.5rem;
+        }
 
-.project-pro-status {
-    display: inline-block;
-    font-size: 0.9rem;
-    color: #007bff;
-    border: 1px solid #007bff;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    margin-bottom: 1rem;
-}
+        .project-pro-details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
 
-.project-pro-description {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 1.5rem;
-}
+        .project-pro-status {
+            display: inline-block;
+            font-size: 0.9rem;
+            color: #007bff;
+            border: 1px solid #007bff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
 
-.project-pro-link {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-}
+        .project-pro-description {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
 
-.project-pro-link:hover {
-    background-color: #0056b3;
-}
+        .project-pro-link {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-pro-link:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .project-pro-card {
+                width: 100%; /* S'assurer que la carte prend toute la largeur disponible */
+            }
+        }
+
+        
 
 
-/* Expérience professionnelle */
-.experience-pro-section {
-    margin-top: 4rem;
-}
+        /* Expérience professionnelle */
+        /* Expérience professionnelle */
+        .experience-pro-section {
+            margin-top: 4rem;
+            text-align: center;
+        }
 
-.experience-pro-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
+        .experience-pro-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
 
-.experience-pro-card {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 1.5rem;
-}
+        .experience-pro-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
 
-.experience-pro-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-}
+        .experience-pro-card {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            width: 60%;
+            max-width: 800px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.experience-pro-description h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
+        @media (max-width: 768px) {
+            .experience-pro-card {
+                width : 100%;
+            }
 
-.experience-pro-description p {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
+        }
+
+        .experience-pro-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .experience-pro-image-wrapper {
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .experience-pro-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .experience-pro-details {
+            flex: 2;
+            padding: 1.5rem;
+        }
+
+        .experience-pro-details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-pro-details p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .experience-pro-details ul {
+            font-size: 1rem;
+            color: #555;
+            list-style-type: disc;
+            margin-left: 1.5rem;
+        }
+
+        /* Section Compétences */
+        .skills-section {
+            padding: 4rem 2rem;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .skills-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        /* Container des compétences */
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        /* Carte des compétences */
+        .skills-category {
+            background-color: #fff;
+            border: 1px solid #ddd; /* Bordure fine pour un effet minimaliste */
+            border-radius: 12px;
+            padding: 2rem;
+            width: 750px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            margin: 0 auto; /* Centre la carte */
+            font-family: 'Arial', sans-serif; /* Police minimaliste */
+        }
+
+        @media (max-width: 768px) {
+            .skills-category {
+                width : 80%;
+            }
+
+        }
+
+        .skills-category:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Titre de chaque catégorie */
+        .skills-category h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Liste des langages */
+        .skills-category ul {
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Élément de chaque langage */
+        .skills-category ul li {
+            margin-bottom: 1rem;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive : Reduit la largeur de la carte sur les petits écrans */
+        @media (max-width: 800px) {
+            .skills-category {
+                width: 90%;
+            }
+        }
+
+        .contact-footer {
+            background-color: #333;
+            color: #fff;
+            padding: 3rem 2rem;
+            text-align: center;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .contact-footer-content {
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .contact-footer h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .contact-footer p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: #bbb;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.8rem 1.2rem;
+            background-color: #555;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .contact-link:hover {
+            background-color: #007bff;
+            transform: scale(1.05);
+        }
+        
+        .contact-link i {
+            margin-right: 0.8rem;
+            font-size: 1.5rem; /* Adjust size for better visibility */
+        }
+        
+        .contact-link:active {
+            transform: scale(0.98);
+        }
+        
+
+
 
 
 
