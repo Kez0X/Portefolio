@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <title>PORTFOLIO - Kez0X</title>
+        <link href="static/style/index.css" rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" href="/static/image/Kez0X.ico">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar">
+            <!-- Logo -->
+            <a href="#" class="logo"><img src="../static/image/Kez0X.png" alt="Logo"></a>
+    
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="#about">À propos de moi</a>
+                <a href="#projects-code">Mes projets code</a>
+                <a href="#projects-pro">Mes projets pro</a>
+                <a href="#skills-section">Mes compétences</a>
+                <a href="#contact-footer">Me contacter</a>
+            </div>
+    
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://github.com" target="_blank">
+                    <img src="../static/image/github.png" alt="GitHub">
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="../static/image/linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
+    
+            <!-- Hamburger Menu -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+        <canvas id="skills-canvas"></canvas>
+        <main class="main-section">
+            <!-- Logo et description -->
+            <div class="intro">
+                <img src="../static/image/Kez0X.png" alt="Logo" class="main-logo">
+                <div class="description">
+                    <h1>Bienvenue sur mon portfolio</h1>
+                    <p>
+                        Je suis <strong>BAUDRANT Luka</strong>, développeur passionné par la création de solutions innovantes. 
+                        Je maîtrise plusieurs langages de programmation et technologies. 
+                        Découvrez mes projets et compétences sur cette page, ou contactez-moi via les réseaux ci-dessous !
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Liens de contact -->
+            <div class="contact-channels">
+                <a href="https://www.instagram.com/luka_lcn/" target="_blank" aria-label="Instagram">
+                    <img src="../static/image/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://fr.linkedin.com/in/luka-baudrant-89799025a" target="_blank" aria-label="LinkedIn">
+                    <img src="../static/image/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="mailto:baudrantl@gmail.com" aria-label="Email">
+                    <img src="../static/image/email.svg" alt="Email">
+                </a>
+                <a href="https://github.com/Kez0X" target="_blank" aria-label="GitHub">
+                    <img src="../static/image/github.png" alt="GitHub">
+                </a>
+            </div>
+        </main>
+        <section id="about" class="about-section">
+            <h2>À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Bonjour ! Je suis <strong>Luka BAUDRANT</strong>, 
+                        un développeur web freelance passionné par la création de solutions numériques innovantes. 
+                        Découvrez <a href="#projects-code" class="about-link">mes projets</a>.
+                    </p>
+                    <p>
+                        En parallèle, je suis formateur et professeur en informatique, 
+                        proposant des cours aux particuliers et entreprises pour leur permettre 
+                        de maîtriser les outils et technologies du développement et du numérique.
+                    </p>
+                    <p>
+                        Actuellement, je suis étudiant en <strong>3ᵉ année de Licence Informatique</strong> à 
+                        l’Université Lyon 2, spécialisation <em>Data Science</em>.
+                    </p>
+                </div>
+                <div class="about-timeline">
+                    <h3>Mon parcours scolaire</h3>
+                    <ul class="timeline">
+                        <li>
+                            <span>2022 - Aujourd'hui</span>
+                            <strong>Licence Informatique</strong> – Université Lyon 2, spécialisation Data Science
+                        </li>
+                        <li>
+                            <span>2022</span>
+                            <strong>Baccalauréat Scientifique</strong> – Lycée Camille Corot, spécialité Mathématiques - NSI - Physique Chimie
+                        </li>
+                        <li>
+                            <span>2017</span>
+                            Début de ma passion pour le développement et la programmation.
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-timeline">
+                    <h3>Mon parcours professionnel</h3>
+                    <ul class="timeline">
+                        <li>
+                            <span>2024 - Aujourd'hui</span>
+                            <strong>Freelance</strong> – Développeur pour petites et moyennes entreprises à son compte
+                        </li>
+                        <li>
+                            <span>2022 - Aujourd'hui</span>
+                            <strong>Formateur et professeur</strong> – Formateur pour les entreprises et particuliers dans le domaine de l'informatique et professeur particulier pour les étudiants en informatique et/ou maths.
+                        </li>
+                        <li>
+                            <span>2019</span>
+                            Stagiaire en entreprise d'informatique : TDI
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="projects-code" class="projects-section">
+            <h2>Mes Projets Code</h2>
+            <div class="projects-container">
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Twins Rental</h3>
+                        <span class="project-status status-in-progress">En cours</span>
+                        <span class="project-type type-professional">Professionnel</span>
+                    </div>
+                    <p class="project-description">
+                        Twins Rental est un projet de site de location de véhicule pour l'un de nos clients, empreinte bancaire via stripe, véhicule, etc...
+                    </p>
+                    <div class="project-technologies">
+                        <img src="../static/image/javascript.png" alt="JavaScript">
+                        <img src="../static/image/sql.png" alt="SQL">
+                        <img src="../static/image/NodeJS.jpg" alt="NodeJS">
+                        <img src="../static/image/vuejs.png" alt="VueJS">
+                        <img src="../static/image/stripe.png" alt="Stripe">
+                        <img src="../static/image/supabase.png" alt="Supabase">
+                    </div>
+                    <a href="https://www.twinsrental.fr/" target="_blank" class="project-link">Voir le projet</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>L'esthetique AA</h3>
+                        <span class="project-status status-completed">Terminé</span>
+                        <span class="project-type type-professional">Professionnel</span>
+                    </div>
+                    <p class="project-description">
+                        Un site web fait avec Svelte Kit et référencé avec la méthode du SEO pour une entreprise d'esthétique. 
+                    </p>
+                    <div class="project-technologies">
+                        <img src="../static/image/svelte.png" alt="Svelte Kit">
+                        <img src="../static/image/javascript.png" alt="JavaScript">
+                        <img src="../static/image/css.png" alt="CSS">
+                    </div>
+                    <a href="https://aa-esthetiqueoullins.fr/" target="_blank" class="project-link">Voir le projet</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Social CO2</h3>
+                        <span class="project-status status-completed">Terminé</span>
+                        <span class="project-type type-school">Universitaire</span>
+                    </div>
+                    <p class="project-description">
+                        SCO2 est un réseau social écologique innovant, évaluant en temps réel l'empreinte carbone de chaque utilisateur grâce à un système de scoring personnalisé.
+                    </p>
+                    <div class="project-technologies">
+                        <img src="../static/image/javascript.png" alt="JavaScript">
+                        <img src="../static/image/flutter.png" alt="Flutter">
+                        <img src="../static/image/sql.png" alt="SQL">
+                        <img src="../static/image/NodeJS.jpg" alt="NodeJS">
+                        <img src="../static/image/socketio.png" alt="Socket.io">
+                    </div>
+                    <a href="https://github.com/VLD-dev-team/Social-Co2" target="_blank" class="project-link">Voir le projet</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Easy Pitch</h3>
+                        <span class="project-status status-in-progress">En cours</span>
+                        <span class="project-type type-professional">Professionnel</span>
+                    </div>
+                    <p class="project-description">
+                        Easy Pitch est une application d’aide à la prise de parole grâce à une Intelligence Artificielle.
+                    </p>
+                    <div class="project-technologies">
+                        <img src="../static/image/javascript.png" alt="JavaScript">
+                        <img src="../static/image/flutter.png" alt="Flutter">
+                    </div>
+                    <a href="#" target="_blank" class="project-link">Voir le projet</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>VLD</h3>
+                        <span class="project-status status-in-progress">En cours</span>
+                        <span class="project-type type-personal">Personnel</span>
+                    </div>
+                    <p class="project-description">
+                        Un site web permettant de vendre des formations en ligne.
+                    </p>
+                    <div class="project-technologies">
+                        <img src="../static/image/javascript.png" alt="JavaScript">
+                        <img src="../static/image/react.png" alt="React">
+                        <img src="../static/image/sql.png" alt="SQL">
+                        <img src="../static/image/NodeJS.jpg" alt="NodeJS">
+                        <img src="../static/image/stripe.png" alt="Stripe">
+                        <img src="../static/image/css.png" alt="CSS">
+                    </div>
+                    <a href="https://school.vld-group.com/" target="_blank" class="project-link">Voir le projet</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Ressource Game</h3>
+                        <span class="project-status status-completed">Terminé</span>
+                        <span class="project-type type-school">Universitaire</span>
+                    </div>
+                    <p class="project-description">
+                        Un jeu de ressource codé en C++.
+                    </p>
+                    <div class="project-technologies">
+                        <img src="../static/image/cpp.png" alt="C++">
+                    </div>
+                    <a href="https://github.com/Kez0X/Ressource-Game" target="_blank" class="project-link">Voir le projet</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Sky Detect</h3>
+                        <span class="project-status status-completed">Terminé</span>
+                        <span class="project-type type-school">Universitaire</span>
+                    </div>
+                    <p class="project-description">
+                        Un projet de reconnaissance d'image à l'aide la librairie OpenCV.
+                    </p>
+                    <div class="project-technologies">
+                        <img src="../static/image/python.png" alt="Python">
+                    </div>
+                    <a href="https://github.com/Kez0X/SkyDetect" target="_blank" class="project-link">Voir le projet</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ChatBot</h3>
+                        <span class="project-status status-completed">Terminé</span>
+                        <span class="project-type type-school">Universitaire</span>
+                    </div>
+                    <p class="project-description">
+                        Un chatBot en python à l'aide de Pandas.
+                    </p>
+                    <div class="project-technologies">
+                        <img src="../static/image/python.png" alt="Python">
+                    </div>
+                    <a href="https://github.com/Kez0X/ChatBot" target="_blank" class="project-link">Voir le projet</a>
+                </div>
+        
+            </div>
+        </section>
+        <section id="projects-pro" class="projects-pro-section">
+            <h2>Mes Projets Professionnels</h2>
+            
+            <!-- Projets professionnels -->
+            <div class="projects-pro-container">
+                <div class="project-pro-card">
+                    <div class="project-pro-images">
+                        <img src="../static/image/esthetiqueAA1.png" alt="L'esthétique AA - Image 1" class="project-pro-image">
+                        <img src="../static/image/esthetiqueAA2.png" alt="L'esthétique AA - Image 2" class="project-pro-image">
+                    </div>
+                    <div class="project-pro-details">
+                        <h3>L'esthétique AA</h3>
+                        <span class="project-pro-status status-completed">Terminé</span>
+                        <p class="project-pro-description">
+                            Développement d'un site vitrine pour une entreprise d'esthétique mettant leurs prestations en avant et optimisé pour le référencement. La création du site a été faite en Svelte Kit, je me suis occupé de l'achat du nom de domaine, intégration de la zone DNS via vercel et mise en ligne. Le référencement c'est fait via Google search Console.
+                        </p>
+                        <a href="https://aa-esthetiqueoullins.fr/" target="_blank" class="project-pro-link">Voir le projet</a>
+                    </div>
+                </div>
+        
+                <div class="project-pro-card">
+                    <div class="project-pro-images">
+                        <img src="../static/image/twinsrental.png" alt="Twins Rental - Image 1" class="project-pro-image">
+                        <img src="../static/image/twinsrental2.png" alt="Twins Rental - Image 2" class="project-pro-image">
+                    </div>
+                    <div class="project-pro-details">
+                        <h3>Twins Rental</h3>
+                        <span class="project-pro-status status-in-progress">En cours</span>
+                        <p class="project-pro-description">
+                            Création d'un site web pour la gestion et location de véhicules en ligne avec automatisation des modèles. Création d'un serveur en NodeJS, gestion de la base de donnée avec PostGreSQL, le front a été fait avec VueJS, pour ce qui est des formulaires de paiements, tout c'est fait via stripe et le stockage des données et de la base de données s'est fait sur supabase et son bucket.
+                        </p>
+                        <a href="https://www.twinsrental.fr/" target="_blank" class="project-pro-link">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project-pro-card">
+                    <div class="project-pro-images">
+                        <img src="../static/image/easypitch1.PNG" alt="Easy Pitch - Image 1" class="project-pro-image">
+                        <img src="../static/image/easypitch2.PNG" alt="Easy Pitch - Image 2" class="project-pro-image">
+                    </div>
+                    <div class="project-pro-details">
+                        <h3>Easy Pitch</h3>
+                        <span class="project-pro-status status-in-progress">En cours</span>
+                        <p class="project-pro-description">
+                            Création d'une application d'aide à la prise de parole pour un client utilisant l'API de Gemini. Pour ce faire nous avons utiliser Flutter, et NodeJS pour discuter avec l'API de Gemini.
+                        </p>
+                        <a href="#" target="_blank" class="project-pro-link">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Expérience professionnelle -->
+            <div class="experience-pro-section">
+                <h2>Mon Expérience Professionnelle</h2>
+                
+                <div class="experience-pro-container">
+                    <div class="experience-pro-card">
+                        <div class="experience-pro-image-wrapper">
+                            <img src="../static/image/luka.jpg" alt="Moi" class="experience-pro-image">
+                        </div>
+                        <div class="experience-pro-details">
+                            <h3>Professeur Particulier</h3>
+                            <p>
+                                Enseignement privé dans les domaines du développement web, de la data science, mathématiques, programmation (python, C++, C)
+                                et des bases de données. Aide des étudiants dans leurs projets et préparation aux examens.
+                            </p>
+                            <p><strong>Entreprises partenaires :</strong></p>
+                            <ul>
+                                <li>Superprof</li>
+                                <li>Digital Formations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-pro-card">
+                        <div class="experience-pro-image-wrapper">
+                            <img src="../static/image/freelance.PNG" alt="Freelance" class="experience-pro-image">
+                        </div>
+                        <div class="experience-pro-details">
+                            <h3>Freelance</h3>
+                            <p>
+                                Développement de solutions numériques pour les entreprises, pages web, réseaax sociaux, 
+                                augmentation de leurs clientèles, augmentation de leurs visibilités sur le web et dans le 
+                                monde du numérique en général.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </section>
+        <section id="skills-section" class="skills-section">
+            <h2>Mes Compétences</h2>
+            <div class="skills-container">
+                <!-- Développement Web -->
+                <div class="skills-category">
+                    <h3>Développement Web - FrontEnd et BackEnd</h3>
+                    <ul>
+                        <li>HTML5, CSS3</li>
+                        <li>JavaScript, ReactJS, Vue.js, SvelteKit</li>
+                        <li>Node.js, Python (Flask), PHP</li>
+                        <li>Stripe (Paiements)</li>
+                        <li>API RESTful</li>
+                        <li>Responsive Design</li>
+                        <li>SEO et Optimisation Web</li>
+                        <li>Création de designs (Figma)</li>
+                    </ul>
+                </div>
+                
+                <!-- Bases de données -->
+                <div class="skills-category">
+                    <h3>Bases de Données</h3>
+                    <ul>
+                        <li>MySQL, MariaDB</li>
+                        <li>PostgreSQL</li>
+                        <li>Supabase</li>
+                        <li>Gestion des bases de données complexes</li>
+                    </ul>
+                </div>
+        
+                <!-- Langages de Programmation -->
+                <div class="skills-category">
+                    <h3>Langages de Programmation</h3>
+                    <ul>
+                        <li>C++, C, Python</li>
+                        <li>JavaScript</li>
+                        <li>PHP (Connaissances pratiques)</li>
+                        <li>C#</li>
+                        <li>Swift</li>
+                        <li>Bash (Utilisation régulière sous Linux)</li>
+                    </ul>
+                </div>
+        
+                <!-- Autres Compétences -->
+                <div class="skills-category">
+                    <h3>Autres Compétences</h3>
+                    <ul>
+                        <li>Gestion de projets (Expérience en gestion d'équipe et projets complexes)</li>
+                        <li>Google Search Console (SEO et gestion du référencement)</li>
+                        <li>GitHub (Gestion de projets, versionnage de code)</li>
+                        <li>Enseignement & Coaching</li>
+                        <li>UML (Modélisation et conception de systèmes)</li>
+                        <li>Firebase (Expérience avec des projets simples)</li>
+                        <li>VBA</li>
+                        <li>Utilisation de Fedora, Ubuntu et Debian</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <footer id="contact-footer" class="contact-footer">
+            <div class="contact-footer-content">
+                <h2>Contactez-moi</h2>
+                <p>Vous pouvez me contacter via les plateformes suivantes :</p>
+                <div class="contact-links">
+                    <a href="mailto:baudrantl@gmail.com" class="contact-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                    <a href="https://fr.linkedin.com/in/luka-baudrant-89799025a" class="contact-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/Kez0X" class="contact-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.instagram.com/luka_lcn/" class="contact-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+            </div>
+        </footer>
+        
+                
+        
+        
+    
+        <script>
+            function toggleMenu() {
+                const navLinks = document.querySelector('.nav-links');
+                const hamburger = document.querySelector('.hamburger');
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active'); // Ajoute l'animation du hamburger
+            }
+
+            const canvas = document.getElementById("skills-canvas");
+            const ctx = canvas.getContext("2d");
+
+            const logos = [
+                { src: "../static/image/javascript.png", x: 0, y: 0, dx: 2, dy: 1 },
+                { src: "../static/image/csharp.png", x: 100, y: 50, dx: -2, dy: 1.5 },
+                { src: "../static/image/cpp.png", x: 200, y: 100, dx: 1, dy: -1 },
+                { src: "../static/image/c.png", x: 300, y: 150, dx: -1, dy: 2 },
+                { src: "../static/image/vuejs.png", x: 400, y: 200, dx: 2, dy: -1 },
+                { src: "../static/image/svelte.png", x: 500, y: 250, dx: -2, dy: 2 },
+                { src: "../static/image/sql.png", x: 600, y: 300, dx: 1, dy: -1 },
+                { src: "../static/image/mariadb.svg", x: 700, y: 350, dx: -1.5, dy: 2 },
+                { src: "../static/image/fedora.png", x: 800, y: 400, dx: 2, dy: -2 },
+                { src: "../static/image/bash.png", x: 900, y: 450, dx: -1.5, dy: 1.5 },
+                { src: "../static/image/python.png", x: 1000, y: 500, dx: 2, dy: -2 },
+                { src: "../static/image/css.png", x: 1100, y: 550, dx: -2, dy: 1 },
+                { src: "../static/image/html.png", x: 1200, y: 600, dx: 1.5, dy: -1 },
+                { src: "../static/image/github.png", x: 1500, y: 750, dx: -1, dy: -2 }
+            ];
+
+            const images = [];
+
+            logos.forEach(logo => {
+                const img = new Image();
+                img.src = logo.src;
+                img.onload = () => images.push({ ...logo, img });
+            });
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                images.forEach(logo => {
+                    ctx.drawImage(logo.img, logo.x, logo.y, 50, 50);
+                    logo.x += logo.dx;
+                    logo.y += logo.dy;
+
+                    // Rebonds
+                    if (logo.x <= 0 || logo.x + 50 >= canvas.width) logo.dx *= -1;
+                    if (logo.y <= 0 || logo.y + 50 >= canvas.height) logo.dy *= -1;
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            // Ajuste le canvas lors du redimensionnement
+            window.addEventListener("resize", () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+
+        </script>
+    </body>
+</html>

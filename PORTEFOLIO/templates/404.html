@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Cutive Mono' rel='stylesheet'>
+    <title>PORTEFOLIO - Projets</title>
+    <link href="/static/style/404.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/static/image/Kez0X.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/loading.css') }}">
+</head>
+<body>
+    <div class="loading" id="loadingContainer">
+        <div class="terminal-loader" >
+            <div class="terminal-header">
+                <div class="terminal-title">Status</div>
+                <div class="terminal-controls">
+                    <div class="control close"></div>
+                    <div class="control minimize"></div>
+                    <div class="control maximize"></div>
+                </div>
+            </div>
+            <div class="text">Loading...</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h1>Erreur 404</h1>
+            <div class="button">
+                <button onclick="window.location.href='javascript:history.back()'">Retourner en arrière</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Cacher le chargement après 3 secondes (5000 millisecondes)
+            setTimeout(function() {
+                document.getElementById('loadingContainer').style.display = 'none';
+            }, 5000);
+        });
+
+        function toggler(){
+            const icon = document.querySelector("#toggler")
+            const menu = document.querySelector('.menu')
+            if (icon.innerHTML == "menu"){
+                icon.innerHTML = "close";
+                menu.style.transform = "translateX(0%)"
+            } else {
+                icon.innerHTML = "menu";
+                menu.style.transform = "translateX(-100%)"
+            }
+        }
+    </script>
+</body>
+</html>
