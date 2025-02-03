@@ -585,7 +585,7 @@ body {
 
         @media (max-width: 768px) {
             .skills-category {
-                width : 80%;
+                width : 75%;
             }
 
         }
@@ -621,7 +621,7 @@ body {
         /* Responsive : Reduit la largeur de la carte sur les petits écrans */
         @media (max-width: 800px) {
             .skills-category {
-                width: 90%;
+                width: 75%;
             }
         }
 
