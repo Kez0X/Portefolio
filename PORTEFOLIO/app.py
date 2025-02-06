@@ -10,7 +10,7 @@ def not_found(error):
     return render_template('404.html'), 404
 
 if __name__ == "__main__":
-    app.run(port=3009)
+    app.run(port=10000)
 
 # les feuilles de style, scripts, images et autres éléments qui ne seront jamais générés dynamiquement doivent être dans le dossier static,
 # les fichiers HTML doivent être dans le dossier templates,
