@@ -149,7 +149,7 @@ body {
             opacity: 0.8;
         }
 
-        /* Section À propos de moi */
+       /* Section À propos de moi */
         .about-section {
             padding: 4rem 1rem;
             background-color: #f7f6f6;
@@ -210,6 +210,8 @@ body {
             margin-bottom: 1.5rem;
             font-size: 1rem;
             line-height: 1.5;
+            position: relative;
+            padding-bottom: 1rem;
         }
 
         .timeline span {
@@ -219,6 +221,53 @@ body {
             color: #555;
             margin-bottom: 0.5rem;
         }
+
+        /* Style pour les liens des entreprises */
+        .company-link {
+            color: #007BFF;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .company-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* Bouton placé en bas à gauche */
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 5px;
+        }
+
+        .desc-btn {
+            background: none;
+            border: 1px solid #333;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .desc-btn:hover {
+            background: #333;
+            color: white;
+        }
+
+        /* Description avec effet fluide */
+        .desc-text {
+            display: none;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+            padding-left: 10px;
+            border-left: 2px solid #ccc;
+            max-width: 750px;
+        }
+
 
         #skills-canvas {
             position: fixed; /* Arrière-plan sur toute la page */
@@ -588,6 +637,12 @@ body {
                 width : 75%;
             }
 
+            .button-container {
+                text-align: center;
+                justify-items: center;
+                justify-content: center;
+            }
+
         }
 
         .skills-category:hover {
@@ -604,18 +659,57 @@ body {
         }
 
         /* Liste des langages */
+
         .skills-category ul {
             list-style-type: none;
             padding-left: 0;
             font-size: 1rem;
             color: #555;
+            display: grid; /* Utilisation de grid pour une disposition moderne */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colonnes réactives */
+            gap: 1rem; /* Espace entre les éléments */
         }
-
+        
         /* Élément de chaque langage */
         .skills-category ul li {
-            margin-bottom: 1rem;
-            text-align: left;
+            display: flex;
+            align-items: center; /* Centrer l'icône et le texte */
             font-size: 1.1rem;
+            padding: 0.5rem;
+            border: 1px solid transparent; /* Bordure transparente pour un effet de survol */
+            border-radius: 8px; /* Coins arrondis */
+            transition: background-color 0.3s ease, border 0.3s ease; /* Transition douce */
+        }
+        
+        .skills-category ul li:hover {
+            background-color: #e9f7fa; /* Couleur de fond au survol */
+            border: 1px solid #007BFF; /* Bordure colorée au survol */
+        }
+        
+        .skills-category ul li i {
+            margin-right: 10px; /* Espace entre l'icône et le texte */
+            color: #007BFF; /* Couleur des icônes */
+            font-size: 1.5rem; /* Taille des icônes */
+        }
+
+        .cv-download {
+            text-align: center;
+            margin-top: 20px;
+        }
+    
+        .cv-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff; /* couleur de fond bleu */
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+    
+        .cv-button:hover {
+            background-color: #0056b3; /* couleur de fond au survol */
         }
 
         /* Responsive : Reduit la largeur de la carte sur les petits écrans */
@@ -624,6 +718,53 @@ body {
                 width: 75%;
             }
         }
+
+        .avis-section {
+            padding: 4rem 2rem;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        
+        .avis-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .avis-item {
+            width: 750px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .avis-button {
+            text-align: center; /* Centre le bouton */
+            margin-top: 20px; /* Espace au-dessus du bouton */
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff; /* Couleur du bouton */
+            color: #fff; /* Couleur du texte */
+            text-decoration: none; /* Pas de soulignement */
+            border-radius: 5px; /* Coins arrondis */
+        }
+        
+        .btn:hover {
+            background-color: #0056b3; /* Couleur au survol */
+        }
+
+        @media (max-width: 800px) {
+            .avis-item {
+                width: 75%;
+            }
+        }
+        
 
         .contact-footer {
             background-color: #333;

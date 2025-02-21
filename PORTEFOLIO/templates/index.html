@@ -22,6 +22,7 @@
                 <a href="#projects-code">Mes projets code</a>
                 <a href="#projects-pro">Mes projets pro</a>
                 <a href="#skills-section">Mes compétences</a>
+                <a href="#avis-superprof">Avis</a>
                 <a href="#contact-footer">Me contacter</a>
             </div>
     
@@ -89,47 +90,127 @@
                     </p>
                     <p>
                         Actuellement, je suis étudiant en <strong>3ᵉ année de Licence Informatique</strong> à 
-                        l’Université Lumière de Lyon, spécialisation <em>Data Science</em>.
+                        l’Université Lumière lYON 2, spécialisation <em>Data Science</em>.
                     </p>
                 </div>
+        
                 <div class="about-timeline">
                     <h3>Mon parcours scolaire</h3>
                     <ul class="timeline">
                         <li>
                             <span>2022 - Aujourd'hui</span>
-                            <strong>Licence Informatique</strong> – Université Lumière de Lyon, spécialisation Data Science
+                            <strong>Licence Informatique</strong> – Université Lumière Lyon 2 - Département ICOM - parcours Data Science
+                            <div class="button-container">
+                                <button class="desc-btn" onclick="toggleDesc('desc-licence')">En savoir plus</button>
+                            </div>
+                            <p class="desc-text" id="desc-licence">
+                                Au cours de ma formation universitaire, j’ai acquis des compétences variées en informatique et en mathématiques, allant du développement web front-end et back-end à la conception d’applications avec C et Swift. J’ai exploré les bases de données, l’ergonomie et le design UI/UX, ainsi que l’algorithmique orientée objet en C++, C et Python. Mon parcours m’a également permis d’approfondir des sujets tels que la programmation concurrente, l’analyse lexicale et la compilation, la programmation VBA, ainsi que la gestion des systèmes de fichiers partagés. Côté mathématiques et data science, j’ai étudié l’algèbre linéaire, le calcul matriciel, l’analyse, les statistiques inférentielles, la régression linéaire et l’analyse exploratoire des données.
+                                </p>
                         </li>
                         <li>
                             <span>2022</span>
                             <strong>Baccalauréat Scientifique</strong> – Lycée Camille Corot, spécialité Mathématiques - NSI - Physique Chimie
+                            <div class="button-container">
+                                <button class="desc-btn" onclick="toggleDesc('desc-bac')">En savoir plus</button>
+                            </div>
+                            <p class="desc-text" id="desc-bac">
+                                Lors de ma spécialité NSI au lycée, j’ai acquis de solides bases en programmation avec Python, en explorant des concepts fondamentaux tels que la programmation orientée objet (POO), les graphes, les protocoles de chiffrement et les réseaux. J’ai également étudié les bases de données relationnelles avec SQL, ainsi que différents paradigmes de programmation. Enfin, j’ai abordé la complexité algorithmique, me permettant de mieux comprendre l’efficacité et l’optimisation des algorithmes.
+                                </p>
                         </li>
                         <li>
                             <span>2017</span>
                             Début de ma passion pour le développement et la programmation.
+                            <div class="button-container">
+                                <button class="desc-btn" onclick="toggleDesc('desc-passion')">En savoir plus</button>
+                            </div>
+                            <p class="desc-text" id="desc-passion">
+                                Premiers pas dans le développement en autodidacte avec la découverte du HTML, CSS, Python et JavaScript.
+                                </p>
                         </li>
                     </ul>
                 </div>
+        
                 <div class="about-timeline">
                     <h3>Mon parcours professionnel</h3>
                     <ul class="timeline">
                         <li>
                             <span>Avril 2025 - Août 2025</span>
-                            <strong>Stage</strong> – Stage universitaire Licence 3 Informatique chez AXOPEN
+                            <strong>Stage</strong> – Stage universitaire Licence 3 Informatique chez 
+                            <a href="https://www.axopen.com" target="_blank" class="company-link">AXOPEN</a>
+                            <div class="button-container">
+                                <button class="desc-btn" onclick="toggleDesc('desc-stage')">En savoir plus</button>
+                            </div>
+                            <p class="desc-text" id="desc-stage">
+                                Futur stage dans le cadre de mes études, je vais être intégré à une équipe de développeurs et contribuer à la création de solutions numériques en utilisant Angular et PHP.
+                            </p>
                         </li>
                         <li>
                             <span>2024 - Aujourd'hui</span>
                             <strong>Freelance</strong> – Développeur pour petites et moyennes entreprises à son compte
+                            <div class="button-container">
+                                <button class="desc-btn" onclick="toggleDesc('desc-freelance')">En savoir plus</button>
+                            </div>
+                            <p class="desc-text" id="desc-freelance">
+                                En tant que développeur web freelance, je conçois et développe des sites et architectures web sur mesure en utilisant divers langages et frameworks tels que JavaScript, Node.js, Vue.js, SvelteKit, .NET et C#. J'assure leur mise en ligne et leur déploiement via des solutions comme Render, Vercel et Nginx, tout en intégrant la gestion des DNS et la modélisation UML. Là où j’excelle particulièrement, c’est dans la création d’architectures API robustes et performantes, en gérant l’intégration de services tels que Stripe pour les paiements, Supabase pour les bases de données et l’hébergement S3, ainsi que Gemini pour l’intelligence artificielle. En parallèle, je crée des maquettes et des designs professionnels via Figma, garantissant une interface utilisateur intuitive et esthétique. Enfin, j’organise et optimise mon travail grâce à une gestion rigoureuse des tâches et des deadlines, tout en maintenant un suivi régulier avec mes clients pour assurer la réussite de leurs projets.
+                            </p>
                         </li>
                         <li>
                             <span>2022 - Aujourd'hui</span>
-                            <strong>Formateur et professeur</strong> – Formateur pour les entreprises et particuliers dans le domaine de l'informatique et professeur particulier pour les étudiants en informatique et/ou maths.
+                            <strong>Formateur et professeur</strong> – Formateur en informatique et maths pour les particuliers et professionnels 
+                            <a href="https://www.superprof.fr/freelance-informatique-etudiant-troisieme-annee-faculte-informatique-lyon-propose-cours-numerique.html" target="_blank" class="company-link">Superprof</a> et en partenariat sur quelques contrats avec <a href="https://digital-formations.fr/" target="_blank" class="company-link">Digital Formations</a>
+                            <div class="button-container">
+                                <button class="desc-btn" onclick="toggleDesc('desc-formateur')">En savoir plus</button>
+                            </div>
+                            <p class="desc-text" id="desc-formateur">
+                                J'assure la gestion efficace de mon emploi du temps tout en apportant des solutions adaptées aux besoins de mes élèves. J'enseigne une large gamme de matières, allant des sciences du numérique et de l’informatique (NSI) pour les lycéens, aux mathématiques pour tous niveaux (de la 6ᵉ à la Terminale), en passant par la bureautique (VBA, tableaux croisés dynamiques, PowerPoint, Word) et l’initiation à l’informatique. J'accompagne également mes élèves dans la découverte et la maîtrise de la programmation web.
+                            </p>
+                        </li>
+                        <li>
+                            <span>Août 2023 et Août 2024</span>
+                            <strong>Auxiliaire de vacances</strong> chez
+                            <a href="https://www.cic.fr/fr/agence/auvergne-rhone-alpes/chassieu/10096-18174-01" target="_blank" class="company-link">CIC ST PRIEST - CHASSIEU</a> et <a href="https://www.cic.fr/fr/agence/auvergne-rhone-alpes/lyon-3e/10096-18139-00" target="_blank" class="company-link"> CIC LYON PART DIEU VILLETTE</a>
+                            <div class="button-container">
+                                <button class="desc-btn" onclick="toggleDesc('desc-auxi')">En savoir plus</button>
+                            </div>
+                            <p class="desc-text" id="desc-auxi">
+                                Gestion des comptes et des relations clients, avec une maîtrise des outils bancaires pour effectuer diverses opérations. J'assure également la résolution efficace des problèmes afin de garantir une expérience fluide et optimale pour les clients.
+                            </p>
+                        </li>
+                        <li>
+                            <span>Mars 2023 - Juillet 2023</span>
+                            <strong>Equipier polyvalent</strong> chez
+                            <a href="https://www.mcdonalds.fr/" target="_blank" class="company-link">Mcdonald's</a>
+                            <div class="button-container">
+                                <button class="desc-btn" onclick="toggleDesc('desc-mcdo')">En savoir plus</button>
+                            </div>
+                            <p class="desc-text" id="desc-mcdo">
+                                Expérience de 4 mois chez McDonald's, où j’ai développé des compétences en gestion du stress, travail en équipe et relation client. J’ai occupé plusieurs postes, allant de la prise de commandes à la préparation des produits, en veillant à respecter les standards de rapidité et de qualité. Cette expérience m’a permis d’améliorer mon efficacité, ma rigueur et ma capacité à m’adapter à un environnement dynamique et exigeant.
+                            </p>
+                        </li>
+                        <li>
+                            <span>Juillet 2022 - Août 2022</span>
+                            <strong>Ouvrier agricole</strong> chez
+                            <a href="https://www.societe.com/societe/gpt-employeurs-industriels-pays-faverges-439266602.html" target="_blank" class="company-link">GPT Faverges</a>
+                            <div class="button-container">
+                                <button class="desc-btn" onclick="toggleDesc('desc-ouvrier')">En savoir plus</button>
+                            </div>
+                            <p class="desc-text" id="desc-ouvrier">
+                                J'ai acquis une expérience précieuse en tant qu'ouvrier agricole, où j'ai travaillé dur pour mettre de côté des fonds en vue de mes études. Pendant cette période, j'ai participé à diverses tâches agricoles, telles que la plantation, la récolte et l'entretien des cultures. Cette expérience m'a permis de développer un sens aigu de la responsabilité, du travail d'équipe et de la persévérance. J'ai également appris à m'adapter aux conditions de travail en plein air et à gérer efficacement mon temps pour maximiser la productivité, tout en respectant les normes de qualité et de sécurité. Cette expérience enrichissante a renforcé ma détermination à poursuivre mes études tout en me sensibilisant aux réalités du monde agricole.
+                            </p>
                         </li>
                         <li>
                             <span>2019</span>
-                            Stagiaire en entreprise d'informatique : TDI
+                            Stagiaire en entreprise d'informatique chez 
+                            <a href="https://www.tdi.fr" target="_blank" class="company-link">TDI</a>
+                            <div class="button-container">
+                                <button class="desc-btn" onclick="toggleDesc('desc-tdi')">En savoir plus</button>
+                            </div>
+                            <p class="desc-text" id="desc-tdi">
+                                Expérience en entreprise où j’ai découvert le monde de l’informatique professionnel. J’ai eu l’occasion de travailler sur des missions d’assistance et de développement web, tout en observant les processus techniques et organisationnels d’une entreprise IT.
+                            </p>
                         </li>
                     </ul>
-                </div>
+                </div>                
             </div>
         </section>
         <section id="projects-code" class="projects-section">
@@ -319,7 +400,7 @@
                         <h3>Twins Rental</h3>
                         <span class="project-pro-status status-in-progress">En cours</span>
                         <p class="project-pro-description">
-                            Création d'un site web pour la gestion et location de véhicules en ligne avec automatisation des modèles. Création d'un serveur en NodeJS, gestion de la base de donnée avec PostGreSQL, le front a été fait avec VueJS, pour ce qui est des formulaires de paiements, tout c'est fait via stripe et le stockage des données et de la base de données s'est fait sur supabase et son bucket.
+                            Création d'un site web pour la gestion et location de véhicules en ligne avec automatisation des modèles. Création d'un serveur en NodeJS, gestion de la base de donnée avec PostGreSQL, le front a été fait avec VueJS, pour ce qui est des formulaires de paiements, tout c'est fait via stripe et le stockage des données et de la base de données s'est fait sur supabase et son bucket S3.
                         </p>
                         <a href="https://www.twinsrental.fr/" target="_blank" class="project-pro-link">Voir le projet</a>
                     </div>
@@ -383,62 +464,127 @@
         <section id="skills-section" class="skills-section">
             <h2>Mes Compétences</h2>
             <div class="skills-container">
-                <!-- Développement Web -->
+                <!-- Développement Web - FrontEnd et BackEnd -->
                 <div class="skills-category">
                     <h3>Développement Web - FrontEnd et BackEnd</h3>
-                    <ul>
-                        <li>HTML5, CSS3</li>
-                        <li>JavaScript, ReactJS, Vue.js, SvelteKit</li>
-                        <li>Node.js, Python (Flask), PHP</li>
-                        <li>C# (Dotnet)</li>
-                        <li>Stripe (Paiements)</li>
-                        <li>API RESTful</li>
-                        <li>Responsive Design</li>
-                        <li>SEO et Optimisation Web</li>
-                        <li>Création de designs (Figma)</li>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-code"></i>HTML5, CSS3, JavaScript</li>
+                        <li><i class="fab fa-js-square"></i>ReactJS, Vue.js, SvelteKit</li>
+                        <li><i class="fas fa-laptop-code"></i>Node.js, Flask, PHP, Symfony, Dotnet</li>
+                        <li><i class="fab fa-stripe-s"></i>Stripe</li>
+                        <li><i class="fas fa-plug"></i>API RESTful</li>
+                        <li><i class="fas fa-mobile-alt"></i>Responsive Design</li>
+                        <li><i class="fas fa-search"></i>SEO et Optimisation Web</li>
+                        <li><i class="fas fa-paint-brush"></i>Figma</li>
+                        <li><i class="fab fa-css3-alt"></i>Tailwind CSS</li>
+                        <li><i class="fab fa-node-js"></i>Express.js</li>
+                        <li><i class="fas fa-plug"></i>Socket.IO</li>
+                        <li><i class="fas fa-cloud"></i>Vercel</li>
                     </ul>
                 </div>
-                
+
                 <!-- Bases de données -->
                 <div class="skills-category">
                     <h3>Bases de Données</h3>
-                    <ul>
-                        <li>MySQL, MariaDB</li>
-                        <li>PostgreSQL</li>
-                        <li>Supabase</li>
-                        <li>Gestion des bases de données complexes</li>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-database"></i>MySQL, MariaDB, PostgreSQL</li>
+                        <li><i class="fas fa-cloud-upload-alt"></i>Supabase</li>
+                        <li><i class="fas fa-cogs"></i>Gestion des bases de données complexes</li>
                     </ul>
                 </div>
-        
+
                 <!-- Langages de Programmation -->
                 <div class="skills-category">
                     <h3>Langages de Programmation</h3>
-                    <ul>
-                        <li>C++, C, Python</li>
-                        <li>JavaScript</li>
-                        <li>PHP (Connaissances pratiques)</li>
-                        <li>C#</li>
-                        <li>Swift</li>
-                        <li>Bash (Utilisation régulière sous Linux)</li>
+                    <ul class="skills-list">
+                        <li><i class="fab fa-python"></i>Python</li>
+                        <li><i class="fab fa-js-square"></i>JavaScript</li>
+                        <li><i class="fab fa-php"></i>PHP</li>
+                        <li><i class="fas fa-code-branch"></i>C#</li>
+                        <li><i class="fas fa-puzzle-piece"></i>C++</li>
+                        <li><i class="fas fa-terminal"></i>C</li>
+                        <li><i class="fab fa-swift"></i>Swift</li>
+                        <li><i class="fab fa-linux"></i>Bash</li>
+                        <li><i class="fab fa-r-project"></i>R</li> 
                     </ul>
                 </div>
-        
-                <!-- Autres Compétences -->
+
+                <!-- Outils et Environnements -->
                 <div class="skills-category">
-                    <h3>Autres Compétences</h3>
-                    <ul>
-                        <li>Gestion de projets (Expérience en gestion d'équipe et projets complexes)</li>
-                        <li>Google Search Console (SEO et gestion du référencement)</li>
-                        <li>GitHub (Gestion de projets, versionnage de code)</li>
-                        <li>Enseignement & Coaching</li>
-                        <li>UML (Modélisation et conception de systèmes)</li>
-                        <li>Firebase (Expérience avec des projets simples)</li>
-                        <li>VBA</li>
-                        <li>Utilisation de Fedora, Ubuntu et Debian</li>
+                    <h3>Outils et Environnements</h3>
+                    <ul class="skills-list">
+                        <li><i class="fab fa-github"></i>GitHub</li>
+                        <li><i class="fas fa-code-branch"></i>Git</li>
+                        <li><i class="fas fa-pencil-alt"></i>Notepad++</li>
+                        <li><i class="fas fa-code"></i>Pyzo</li>
+                        <li><i class="fas fa-puzzle-piece"></i>Postman</li>
+                        <li><i class="fas fa-paint-brush"></i>Illustrator</li>
+                        <li><i class="fas fa-video"></i>Shotcut</li>
+                        <li><i class="fab fa-linux"></i>Utilisation de Fedora, Ubuntu et Debian</li>
+                        <li><i class="fab fa-windows"></i>Configuration DNS</li>
+                    </ul>
+                </div>
+
+                <!-- Méthodologies -->
+                <div class="skills-category">
+                    <h3>Méthodologies</h3>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-tasks"></i>Agile</li>
+                        <li><i class="fas fa-project-diagram"></i>Gestion de projets XP gestion d'équipe et projets complexes)</li>
+                        <li><i class="fas fa-search"></i>Google Search Console - SEO</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i>Enseignement & Coaching</li>
+                        <li><i class="fas fa-project-diagram"></i>UML - Modélisation et conception de systèmes</li>
+                        <li><i class="fab fa-fire"></i>Firebase - Expérience avec des projets simples</li>
+                        <li><i class="fas fa-file-excel"></i>VBA</li>
+                        <li><i class="fa-sharp fa-solid fa-sitemap"></i>Architecture MVC</li>
                     </ul>
                 </div>
             </div>
+            <div class="cv-download">
+                <a href="../static/image/cv.pdf" class="cv-button" download>Télécharger mon Curriculum Vitæ<i class="fas fa-download"></i></a>
+            </div>
         </section>
+        <section id="avis-superprof" class="avis-section">
+            <h2>Avis de mes Élèves sur Superprof</h2>
+            <p>Découvrez ce que mes élèves pensent de mes cours et de mon enseignement.</p>
+            <div class="avis-container">
+                <div class="avis-item">
+                    <p><strong>Laetitia :</strong> "Luka est très professionnel et possède de bonnes compétences pédagogiques."</p>
+                    <p><em>⭐⭐⭐⭐⭐</em></p>
+                </div>
+                <div class="avis-item">
+                    <p><strong>Christelle :</strong> "En classe de terminal, je suivais les cours pars le CNED de Spécialité NSI, plus je passais de temps à faire les exercices autocorriger moins je comprenais. Luka m'a aider et permis de réviser les cours de première et de dépasser les cours du CNED. il est super sympas et a de bonnes idées d'exercices personnalisés. Sa note ? 20/20"</p>
+                    <p><em>⭐⭐⭐⭐⭐</em></p>
+                </div>
+                <div class="avis-item">
+                    <p><strong>Koman :</strong> "Très bonne année passée avec Luka qui a su accompagné mon fils en NSI et Math.
+                        Sérieux, professionnel et passionné.
+                        préparation pour le bac à l'écrit comme à l'oral parfait.
+                        Mon fils revenait de très loin et grace à Luka qui a su capter les difficultés mon fils a eu + que la moyenne à son bac."</p>
+                    <p><em>⭐⭐⭐⭐⭐</em></p>
+                </div>
+                <div class="avis-item">
+                    <p><strong>Olivier :</strong> "Antoine est très content des premières heures de cours données par Luka. Un très bon feeling avec les jeunes."</p>
+                    <p><em>⭐⭐⭐⭐⭐</em></p>
+                </div>
+                <div class="avis-item">
+                    <p><strong>Natacha :</strong> "Luka est un super professeur. Il est très pédagogue et à rendu claires des notions de NSI qui semblaient complexes. Nous le recommandons sans réserve."</p>
+                    <p><em>⭐⭐⭐⭐⭐</em></p>
+                </div>
+                <div class="avis-item">
+                    <p><strong>Sofiane :</strong> "Excellent professeur, capable de s'adapter rapidement aux besoins de l'élève."</p>
+                    <p><em>⭐⭐⭐⭐⭐</em></p>
+                </div>
+                <div class="avis-item">
+                    <p><strong>Nathan :</strong> "Luka est très sympa, à l'écoute et explique très bien ! C'est en grande partie grâce à lui que j'ai réussi à sauver mon bac de NSI ! Je le recommande donc très fortement !"</p>
+                    <p><em>⭐⭐⭐⭐⭐</em></p>
+                </div>
+            </div>
+            <div class="avis-button">
+                <a href="https://www.superprof.fr/freelance-informatique-etudiant-troisieme-annee-faculte-informatique-lyon-propose-cours-numerique.html#opinions" target="_blank" class="btn">Voir plus d'avis</a>
+            </div>
+        </section>
+        
         
         <footer id="contact-footer" class="contact-footer">
             <div class="contact-footer-content">
@@ -521,6 +667,15 @@
 
                 requestAnimationFrame(animate);
             }
+
+            function toggleDesc(id) {
+            var desc = document.getElementById(id);
+            if (desc.style.display === "none" || desc.style.display === "") {
+                desc.style.display = "block";
+            } else {
+                desc.style.display = "none";
+            }
+        }
 
             animate();
 
