@@ -399,17 +399,34 @@ body {
         }
 
         /* Lien du projet */
-        .project-link {
-            display: inline-block;
+       /* Conteneur des liens */
+        .project-links {
+            display: flex;
+            gap: 1rem; /* Espace entre les liens */
             margin-top: 1rem;
-            color: #007BFF;
+        }
+
+        /* Lien du projet */
+        .project-link {
+            color: #007BFF; /* Bleu classique pour les liens */
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s ease;
         }
 
         .project-link:hover {
-            color: #0056b3;
+            color: #0056b3; /* Bleu plus foncé au survol */
+            text-decoration: underline; /* Soulignement au survol */
+        }
+
+        /* Texte "Pas de site" */
+        .project-link.unavailable {
+            color: #666; /* Gris pour indiquer l'indisponibilité */
+            cursor: default; /* Curseur par défaut (non cliquable) */
+        }
+
+        .project-link.unavailable:hover {
+            text-decoration: none; /* Pas de soulignement au survol */
         }
 
         /* Styles spécifiques à la section des projets professionnels */
