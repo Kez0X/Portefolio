@@ -86,8 +86,8 @@
                 <div class="about-text">
                     <p>
                         Bonjour ! Je suis <strong>Luka BAUDRANT</strong>, 
-                        un développeur web freelance passionné par la création de solutions numériques innovantes. 
-                        Découvrez <a href="#projects-code" class="about-link">mes projets</a>.
+                        un <span class="rainbow-text">développeur web freelance</span> passionné par la création de solutions numériques innovantes. 
+                        Découvrez <span class="highlight-hover" ><a href="#projects-code" class="about-link">mes projets</a></span>.
                     </p>
                     <p>
                         En parallèle, je suis formateur et professeur en informatique, 
@@ -95,8 +95,8 @@
                         de maîtriser les outils et technologies du développement et du numérique.
                     </p>
                     <p>
-                        Actuellement, je suis étudiant en <strong>3ᵉ année de Licence Informatique</strong> à 
-                        l’Université Lumière lYON 2, spécialisation <em>Data Science</em>.
+                        Actuellement, je suis diplomé d'une <strong class="chromatic-aberration" data-text="Licence 3 Informatique">Licence 3 Informatique</strong> à 
+                        l’Université Lumière lYON 2, spécialisation <em>Data Science</em>. Et je suis un futur étudiant en  <strong class="chromatic-aberration" data-text="Master 1 informatique">Master 1 informatique</strong> à l'université Claude Bernard Lyon 1.
                     </p>
                 </div>
         
@@ -104,7 +104,17 @@
                     <h3>Mon parcours scolaire</h3>
                     <ul class="timeline">
                         <li>
-                            <span>2022 - Aujourd'hui</span>
+                            <span>2025 - Un jour plus tard</span>
+                            <strong>Master Informatique en Alternance</strong> – Université Claude Bernard Lyon 1
+                            <div class="button-container">
+                                <button class="desc-btn" onclick="toggleDesc('desc-master')">En savoir plus</button>
+                            </div>
+                            <p class="desc-text" id="desc-master">
+                                Ma formation n'a pas encore commencé mais j'ai hâte de la débuter ! 
+                                </p>
+                        </li>
+                        <li>
+                            <span>2022 - 2025</span>
                             <strong>Licence Informatique</strong> – Université Lumière Lyon 2 - Département ICOM - parcours Data Science
                             <div class="button-container">
                                 <button class="desc-btn" onclick="toggleDesc('desc-licence')">En savoir plus</button>
@@ -139,6 +149,17 @@
                 <div class="about-timeline">
                     <h3>Mon parcours professionnel</h3>
                     <ul class="timeline">
+                        <li>
+                            <span>Août 2025 - Juillet 2027</span>
+                            <strong>Alternance</strong> – Alternance de MASTER chez 
+                            <a href="https://www.lyaprotect.com/" target="_blank" class="company-link">LYA PROTECT</a>
+                            <div class="button-container">
+                                <button class="desc-btn" onclick="toggleDesc('desc-alternance')">En savoir plus</button>
+                            </div>
+                            <p class="desc-text" id="desc-alternance">
+                                Hâte de débuter !
+                            </p>
+                        </li>
                         <li>
                             <span>Avril 2025 - Août 2025</span>
                             <strong>Stage</strong> – Stage universitaire Licence 3 Informatique chez 
@@ -219,6 +240,10 @@
                 </div>                
             </div>
         </section>
+
+
+
+        
         <section id="projects-pro" class="projects-pro-section">
             <h2>Mes Projets Professionnels</h2>
             
@@ -797,7 +822,26 @@
         { src: "../static/image/html.png", x: 1250, y: 650, dx: 1.2, dy: -1, width: 50, height: 50, img: null },
         { src: "../static/image/github.png", x: 1350, y: 700, dx: -1, dy: -1.5, width: 50, height: 50, img: null },
         { src: "../static/image/symphony.png", x: 1450, y: 750, dx: -0.8, dy: 1.5, width: 50, height: 50, img: null },
-        { src: "../static/image/php.png", x: 1550, y: 800, dx: 0.8, dy: 1, width: 50, height: 50, img: null },
+        { src: "../static/image/php.svg", x: 1550, y: 800, dx: 0.8, dy: -1, width: 50, height: 50, img: null },
+        { src: "../static/image/angular.svg", x: 1650, y: 850, dx: -0.8, dy: 1, width: 50, height: 50, img: null },
+        { src: "../static/image/java.svg", x: 1075, y: 675, dx: 1, dy: 0.8, width: 50, height: 50, img: null },
+        { src: "../static/image/springboot.svg", x: 655, y: 350, dx: 0.6, dy: -1, width: 50, height: 50, img: null },
+
+
+        { src: "../static/image/postgresql-svgrepo-com.svg", x: 100, y: 200, dx: 1, dy: -1.2, width: 50, height: 50, img: null },
+        { src: "../static/image/docker-svgrepo-com.svg", x: 200, y: 250, dx: -1, dy: 1.2, width: 50, height: 50, img: null },
+        { src: "../static/image/gitlab-svgrepo-com.svg", x: 300, y: 300, dx: 1.2, dy: -1.5, width: 50, height: 50, img: null },
+        { src: "../static/image/firebase-svgrepo-com.svg", x: 400, y: 350, dx: -1.5, dy: 1.5, width: 50, height: 50, img: null },
+        { src: "../static/image/react-javascript-js-framework-facebook-svgrepo-com.svg", x: 500, y: 400, dx: 1, dy: -1.5, width: 50, height: 50, img: null },
+        { src: "../static/image/postman-icon-svgrepo-com.svg", x: 600, y: 450, dx: -1.2, dy: 1.2, width: 50, height: 50, img: null },
+        { src: "../static/image/ubuntu-svgrepo-com.svg", x: 700, y: 500, dx: 1.2, dy: -1, width: 50, height: 50, img: null },
+        { src: "../static/image/microsoft-svgrepo-com.svg", x: 800, y: 550, dx: -1.4, dy: 1, width: 50, height: 50, img: null },
+        { src: "../static/image/linux-svgrepo-com.svg", x: 900, y: 600, dx: 1.5, dy: -1.4, width: 50, height: 50, img: null },
+        { src: "../static/image/swift-svgrepo-com.svg", x: 1000, y: 650, dx: -1.3, dy: 1.3, width: 50, height: 50, img: null },
+        { src: "../static/image/node-js-svgrepo-com.svg", x: 1100, y: 700, dx: 1.3, dy: -1.3, width: 50, height: 50, img: null },
+        { src: "../static/image/stripe-svgrepo-com.svg", x: 1200, y: 750, dx: -1, dy: 1, width: 50, height: 50, img: null },
+        { src: "../static/image/tailwind-svgrepo-com.svg", x: 1300, y: 800, dx: 1.1, dy: -1.2, width: 50, height: 50, img: null },
+        { src: "../static/image/cloudflare-svgrepo-com.svg", x: 1400, y: 850, dx: -1.1, dy: 1.1, width: 50, height: 50, img: null },
         {
             element: document.querySelector('.description h1'),
             type: 'title',
@@ -1108,7 +1152,35 @@
 
     // Démarrer l'animation
     animate();
-</script>
+
+    // Activer l'animation quand visible
+    const typewriters = document.querySelectorAll('.typewriter');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    });
+
+    typewriters.forEach(el => observer.observe(el));
+
+    // Activer avec Intersection Observer
+    document.querySelectorAll('.mosaic-word').forEach(el => {
+        const text = el.textContent;
+        el.innerHTML = text.split('').map((c, i) => 
+            `<span style="transition-delay: ${i * 0.05}s">${c}</span>`
+        ).join('');
+        
+        new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }).observe(el);
+    });
+    </script>
 
     </body>
 </html>
