@@ -700,36 +700,37 @@
                 
         
         
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Répartition uniforme sur tout l'écran
-        const cols = Math.floor(Math.sqrt(CONFIG.particles.count));
-        const rows = Math.ceil(CONFIG.particles.count / cols);
-        const cellWidth = canvas.width / cols;
-        const cellHeight = canvas.height / rows;
-        
-        particles.forEach((p, i) => {
-            // Position uniforme
-            const col = i % cols;
-            const row = Math.floor(i / cols);
-            p.x = col * cellWidth + cellWidth/2;
-            p.y = row * cellHeight + cellHeight/2;
+    
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Répartition uniforme sur tout l'écran
+            const cols = Math.floor(Math.sqrt(CONFIG.particles.count));
+            const rows = Math.ceil(CONFIG.particles.count / cols);
+            const cellWidth = canvas.width / cols;
+            const cellHeight = canvas.height / rows;
             
-            // Effet d'explosion
-            p.sparkle = 1;
-            p.vx = (Math.random() - 0.5) * 10;
-            p.vy = (Math.random() - 0.5) * 10;
-        });
-        
-        // Après 1 seconde, retour à un mouvement plus calme
-        setTimeout(() => {
-            particles.forEach(p => {
-                p.vx = (Math.random() - 0.5) * 2;
-                p.vy = (Math.random() - 0.5) * 2;
+            particles.forEach((p, i) => {
+                // Position uniforme
+                const col = i % cols;
+                const row = Math.floor(i / cols);
+                p.x = col * cellWidth + cellWidth/2;
+                p.y = row * cellHeight + cellHeight/2;
+                
+                // Effet d'explosion
+                p.sparkle = 1;
+                p.vx = (Math.random() - 0.5) * 10;
+                p.vy = (Math.random() - 0.5) * 10;
             });
-        }, 1000);
-    });
-
+            
+            // Après 1 seconde, retour à un mouvement plus calme
+            setTimeout(() => {
+                particles.forEach(p => {
+                    p.vx = (Math.random() - 0.5) * 2;
+                    p.vy = (Math.random() - 0.5) * 2;
+                });
+            }, 1000);
+        });
+    
     function toggleMenu() {
         const navLinks = document.querySelector('.nav-links');
         const hamburger = document.querySelector('.hamburger');
@@ -752,8 +753,8 @@
             orbitRadius: 60,
             trailLength: 10,
             sparkle: {
-                chance: 0.15,
-                intensity: 2.5,
+                chance: 0.15,  // Augmenté pour plus d'étincelles
+                intensity: 2.5,  // Plus intense
                 duration: 0.4,
                 sizeBoost: 0.9,
                 highlightColor: { r: 255, g: 120, b: 30 }
@@ -764,12 +765,12 @@
                 randomMove: 0.5
             },
             portraitEffect: {
-                orbitRadius: 80,
-                sparkleBoost: 1.5
+                orbitRadius: 80,  // Plus large pour le portrait
+                sparkleBoost: 1.5  // Boost d'étincelles sur le portrait
             },
             titleEffect: {
-                lineHeight: 5,
-                spread: 30
+                lineHeight: 5,  // Hauteur de la ligne de soulignement
+                spread: 30  // Étendue des particules
             }
         },
         elements: {
@@ -832,8 +833,7 @@
             currentElement: null,
             life: Math.random() * 100,
             lifeSpeed: 0.01 + Math.random() * 0.02,
-            currentColor: null,
-            colorTransition: 0
+            currentColor: null
         };
     });
 
@@ -900,44 +900,41 @@
         // Vérifier si la particule est sur une image
         for (const el of interactiveElements) {
             if (el.img && el.x <= p.x && p.x <= el.x + el.width && 
-                el.y <= p.y && p.y <= el.y + el.height && el.dominantColor) {
-                return el.dominantColor;
+                el.y <= p.y && p.y <= el.y + el.height) {
+                // Si on a déjà calculé la couleur dominante, l'utiliser
+                if (el.dominantColor) {
+                    return el.dominantColor;
+                }
+                
+                // Sinon, utiliser la couleur par défaut
+                return CONFIG.particles.baseColor;
             }
         }
         
-        // Si pas sur une image ou couleur non chargée, retourner la couleur de base
+        // Si pas sur une image, retourner la couleur de base
         return CONFIG.particles.baseColor;
     }
 
-    function getPixelColorUnderParticle(x, y) {
-        // Crée un canvas temporaire pour analyser la couleur
-        const tempCanvas = document.createElement('canvas');
-        const tempCtx = tempCanvas.getContext('2d');
-        tempCanvas.width = 1;
-        tempCanvas.height = 1;
-        
-        // Dessine l'état actuel du canvas à la position de la particule
-        tempCtx.drawImage(canvas, -x, -y);
-        
-        // Récupère la couleur du pixel
-        const pixel = tempCtx.getImageData(0, 0, 1, 1).data;
-        return { r: pixel[0], g: pixel[1], b: pixel[2] };
-}
-
+    // Fonction de couleur avec effet de vie
     function getParticleColor(p) {
-    // Récupère la couleur exacte sous la particule
-        const pixelColor = getPixelColorUnderParticle(p.x, p.y);
+        // Obtenir la couleur sous la particule
+        const baseColor = p.currentColor || getColorUnderParticle(p);
+        p.currentColor = baseColor; // Mettre en cache la couleur
         
-        // Applique l'effet d'étincelle si nécessaire
         if (p.sparkle > 0) {
-            const intensity = p.sparkle * CONFIG.particles.sparkle.intensity;
-            const r = Math.min(255, pixelColor.r * (1 + intensity));
-            const g = Math.min(255, pixelColor.g * (1 + intensity * 0.7));
-            const b = Math.min(255, pixelColor.b * (1 - intensity * 0.3));
+            let intensity = p.sparkle * CONFIG.particles.sparkle.intensity;
+            
+            // Boost d'intensité pour le portrait
+            if (p.currentElement?.type === 'portrait') {
+                intensity *= CONFIG.particles.portraitEffect.sparkleBoost;
+            }
+            
+            const r = Math.min(255, baseColor.r * (1 + intensity));
+            const g = Math.min(255, baseColor.g * (1 + intensity * 0.7));
+            const b = Math.min(255, baseColor.b * (1 - intensity * 0.3));
             return `rgba(${r}, ${g}, ${b}, ${p.alpha})`;
         }
-        
-        return `rgba(${pixelColor.r}, ${pixelColor.g}, ${pixelColor.b}, ${p.alpha})`;
+        return `rgba(${baseColor.r}, ${baseColor.g}, ${baseColor.b}, ${p.alpha})`;
     }
 
     // Fonction pour extraire la couleur dominante d'une image
@@ -955,7 +952,7 @@
         const imageData = tempCtx.getImageData(0, 0, 50, 50).data;
         const colorCount = {};
         let maxCount = 0;
-        let dominantColor = CONFIG.particles.baseColor;
+        let dominantColor = CONFIG.particles.baseColor; // Couleur par défaut
         
         // Parcourir les pixels (on saute des pixels pour la performance)
         for (let i = 0; i < imageData.length; i += 16) {
@@ -1009,7 +1006,6 @@
             p.life += p.lifeSpeed;
             p.trail.push({ x: p.x, y: p.y, size: p.radius });
             if (p.trail.length > CONFIG.particles.trailLength) p.trail.shift();
-        
             
             // Effet d'étincelle
             if (Math.random() < CONFIG.particles.sparkle.chance) {
@@ -1092,6 +1088,7 @@
             ctx.beginPath();
             let sparkleSize = p.sparkle > 0 ? CONFIG.particles.sparkle.sizeBoost : 0;
             
+            // Agrandissement supplémentaire pour le portrait
             if (p.currentElement?.type === 'portrait' && p.sparkle > 0) {
                 sparkleSize *= 1.5;
             }
@@ -1102,17 +1099,6 @@
         });
 
         requestAnimationFrame(animate);
-    }
-
-    // Fonction pour obtenir l'élément sous la particule
-    function getElementUnderParticle(p) {
-        for (const el of interactiveElements) {
-            if (el.img && el.x <= p.x && p.x <= el.x + el.width && 
-                el.y <= p.y && p.y <= el.y + el.height) {
-                return el;
-            }
-        }
-        return null;
     }
 
     function toggleDesc(id) {
