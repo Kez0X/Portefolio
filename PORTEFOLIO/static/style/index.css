@@ -91,10 +91,11 @@ body {
             justify-content: center;
             padding: 2rem 1rem;
             min-height: 100vh;
+            z-index : 1;
         }
         
-        /* Logo */
-        .main-logo {
+       /* Sépare ces règles */
+         .main-logo {
             max-width: 250px;
             border-radius: 50%;
             margin-bottom: 1rem;
@@ -108,7 +109,6 @@ body {
             display: inline-block; /* Ajuste la taille au contenu */
             margin: 2rem auto; /* Centre horizontalement */
             }
-            
         }
         
         /* Description */
@@ -121,6 +121,8 @@ body {
         .description h1 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block; /* Pour que le hover couvre juste le texte */
         }
         
         .description p {
@@ -278,6 +280,7 @@ body {
             z-index: -1; /* Sous tout le contenu */
             pointer-events: none; /* Pas d'interactions utilisateur */
         }
+
 
         /* Section "Mes Projets Code" */
         .projects-section {
