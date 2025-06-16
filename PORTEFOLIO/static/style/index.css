@@ -1027,6 +1027,10 @@ body {
             .timeline li {
                 font-size: 0.9rem;
             }
+
+            #skills-canvas{
+                display : none;
+            }
         }
 
         
